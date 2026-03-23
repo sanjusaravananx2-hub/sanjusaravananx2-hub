@@ -1,16 +1,16 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:00d4aa,100:00b4d8&height=230&section=header&text=Sanjeev%20Kumar&fontSize=44&fontColor=ffffff&fontAlignY=32&desc=Embedded%20Systems%20Engineer%20%E2%80%A2%20FPGA%20%E2%80%A2%20RTL%20Design%20%E2%80%A2%20ARM%20Cortex%20%E2%80%A2%20Firmware&descSize=15&descColor=c9d1d9&descAlignY=52&animation=fadeIn" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=230&section=header&text=Sanjeev%20Kumar&fontSize=44&fontColor=ffffff&fontAlignY=32&desc=Embedded%20Systems%20Engineer%20%E2%80%A2%20FPGA%20%E2%80%A2%20RTL%20Design%20%E2%80%A2%20ARM%20Cortex%20%E2%80%A2%20Firmware&descSize=15&descColor=c9d1d9&descAlignY=52&animation=fadeIn" width="100%"/>
 </p>
 
 <p align="center">
-  <a href="mailto:sanjeevsaravanakumarx1@gmail.com"><img src="https://img.shields.io/badge/Email-0d1117?style=for-the-badge&logo=gmail&logoColor=00d4aa" alt="Email"/></a>&nbsp;
-  <a href="https://linkedin.com/in/sanjeev-kumarx2"><img src="https://img.shields.io/badge/LinkedIn-0d1117?style=for-the-badge&logo=linkedin&logoColor=00b4d8" alt="LinkedIn"/></a>&nbsp;
-  <a href="https://github.com/sanjusaravananx2-hub"><img src="https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=ffffff" alt="GitHub"/></a>&nbsp;
-  <img src="https://img.shields.io/badge/Leeds,%20UK-0d1117?style=for-the-badge&logo=googlemaps&logoColor=00d4aa" alt="Location"/>
+  <a href="mailto:sanjeevsaravanakumarx1@gmail.com"><img src="https://img.shields.io/badge/Email-0f0c29?style=for-the-badge&logo=gmail&logoColor=e06c75" alt="Email"/></a>&nbsp;
+  <a href="https://linkedin.com/in/sanjeev-kumarx2"><img src="https://img.shields.io/badge/LinkedIn-0f0c29?style=for-the-badge&logo=linkedin&logoColor=61afef" alt="LinkedIn"/></a>&nbsp;
+  <a href="https://github.com/sanjusaravananx2-hub"><img src="https://img.shields.io/badge/GitHub-0f0c29?style=for-the-badge&logo=github&logoColor=ffffff" alt="GitHub"/></a>&nbsp;
+  <img src="https://img.shields.io/badge/Leeds,%20UK-0f0c29?style=for-the-badge&logo=googlemaps&logoColor=98c379" alt="Location"/>
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=3000&pause=1000&color=00D4AA&center=true&vCenter=true&repeat=true&width=750&height=30&lines=MSc+Embedded+Systems+Engineering+%40+University+of+Leeds;FPGA+%7C+Verilog+RTL+%7C+ARM+Cortex+%7C+Real-Time+Systems;900%2B+lines+of+synthesizable+Verilog+%E2%80%94+zero+IP+cores;Hardware-software+co-design+on+heterogeneous+SoCs" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=3000&pause=1000&color=C678DD&center=true&vCenter=true&repeat=true&width=750&height=30&lines=MSc+Embedded+Systems+Engineering+%40+University+of+Leeds;FPGA+%7C+Verilog+RTL+%7C+ARM+Cortex+%7C+Real-Time+Systems;900%2B+lines+of+synthesizable+Verilog+%E2%80%94+zero+IP+cores;Hardware-software+co-design+on+heterogeneous+SoCs" alt="Typing SVG" />
 </p>
 
 <br>
@@ -52,44 +52,44 @@ static const embedded_engineer_t me = {
 
 **HDL & Digital Design**
 
-![Verilog](https://img.shields.io/badge/Verilog_HDL-00d4aa?style=for-the-badge&logoColor=0d1117)
-![SystemVerilog](https://img.shields.io/badge/SystemVerilog-00b4d8?style=for-the-badge&logoColor=0d1117)
-![RTL](https://img.shields.io/badge/RTL_Design-0d1117?style=for-the-badge)
-![FSM](https://img.shields.io/badge/FSM_Design-0d1117?style=for-the-badge)
+![Verilog](https://img.shields.io/badge/Verilog_HDL-c678dd?style=for-the-badge&logoColor=fff)
+![SystemVerilog](https://img.shields.io/badge/SystemVerilog-61afef?style=for-the-badge&logoColor=fff)
+![RTL](https://img.shields.io/badge/RTL_Design-282c34?style=for-the-badge)
+![FSM](https://img.shields.io/badge/FSM_Design-282c34?style=for-the-badge)
 
 **FPGA & EDA Tools**
 
-![Quartus](https://img.shields.io/badge/Intel_Quartus_Prime-00b4d8?style=for-the-badge&logo=intel&logoColor=white)
-![ModelSim](https://img.shields.io/badge/ModelSim-0d1117?style=for-the-badge)
-![SignalTap](https://img.shields.io/badge/SignalTap_II-0d1117?style=for-the-badge)
+![Quartus](https://img.shields.io/badge/Intel_Quartus_Prime-61afef?style=for-the-badge&logo=intel&logoColor=white)
+![ModelSim](https://img.shields.io/badge/ModelSim-282c34?style=for-the-badge)
+![SignalTap](https://img.shields.io/badge/SignalTap_II-282c34?style=for-the-badge)
 
 </td><td>
 
 **Languages**
 
-![C](https://img.shields.io/badge/C-00d4aa?style=for-the-badge&logo=c&logoColor=0d1117)
-![C++](https://img.shields.io/badge/C++-00b4d8?style=for-the-badge&logo=cplusplus&logoColor=0d1117)
-![Python](https://img.shields.io/badge/Python-00d4aa?style=for-the-badge&logo=python&logoColor=0d1117)
-![MATLAB](https://img.shields.io/badge/MATLAB-00b4d8?style=for-the-badge&logo=mathworks&logoColor=white)
+![C](https://img.shields.io/badge/C-e06c75?style=for-the-badge&logo=c&logoColor=fff)
+![C++](https://img.shields.io/badge/C++-61afef?style=for-the-badge&logo=cplusplus&logoColor=fff)
+![Python](https://img.shields.io/badge/Python-98c379?style=for-the-badge&logo=python&logoColor=fff)
+![MATLAB](https://img.shields.io/badge/MATLAB-e5c07b?style=for-the-badge&logo=mathworks&logoColor=fff)
 
 **Embedded Platforms**
 
-![STM32](https://img.shields.io/badge/STM32_Cortex--M-00d4aa?style=for-the-badge&logo=stmicroelectronics&logoColor=0d1117)
-![CycloneV](https://img.shields.io/badge/Cyclone_V_SoC-00b4d8?style=for-the-badge&logo=intel&logoColor=white)
-![Pixhawk](https://img.shields.io/badge/PX4_NuttX-0d1117?style=for-the-badge)
+![STM32](https://img.shields.io/badge/STM32_Cortex--M-e06c75?style=for-the-badge&logo=stmicroelectronics&logoColor=fff)
+![CycloneV](https://img.shields.io/badge/Cyclone_V_SoC-61afef?style=for-the-badge&logo=intel&logoColor=white)
+![Pixhawk](https://img.shields.io/badge/PX4_NuttX-282c34?style=for-the-badge)
 
 </td></tr>
 </table>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/AXI4--Lite-00d4aa?style=for-the-badge" alt="AXI4-Lite"/>
-  <img src="https://img.shields.io/badge/SPI-00b4d8?style=for-the-badge" alt="SPI"/>
-  <img src="https://img.shields.io/badge/I2C-00d4aa?style=for-the-badge" alt="I2C"/>
-  <img src="https://img.shields.io/badge/CAN_2.0B-00b4d8?style=for-the-badge" alt="CAN"/>
-  <img src="https://img.shields.io/badge/UART-00d4aa?style=for-the-badge" alt="UART"/>
-  <img src="https://img.shields.io/badge/PWM-00b4d8?style=for-the-badge" alt="PWM"/>
-  <img src="https://img.shields.io/badge/DMA-00d4aa?style=for-the-badge" alt="DMA"/>
-  <img src="https://img.shields.io/badge/USB_CDC-00b4d8?style=for-the-badge" alt="USB"/>
+  <img src="https://img.shields.io/badge/AXI4--Lite-c678dd?style=for-the-badge" alt="AXI4-Lite"/>
+  <img src="https://img.shields.io/badge/SPI-61afef?style=for-the-badge" alt="SPI"/>
+  <img src="https://img.shields.io/badge/I2C-98c379?style=for-the-badge" alt="I2C"/>
+  <img src="https://img.shields.io/badge/CAN_2.0B-e06c75?style=for-the-badge" alt="CAN"/>
+  <img src="https://img.shields.io/badge/UART-e5c07b?style=for-the-badge" alt="UART"/>
+  <img src="https://img.shields.io/badge/PWM-61afef?style=for-the-badge" alt="PWM"/>
+  <img src="https://img.shields.io/badge/DMA-c678dd?style=for-the-badge" alt="DMA"/>
+  <img src="https://img.shields.io/badge/USB_CDC-98c379?style=for-the-badge" alt="USB"/>
 </p>
 
 <br>
@@ -101,39 +101,41 @@ static const embedded_engineer_t me = {
 <table>
 <tr><td>
 
-### <img src="https://img.shields.io/badge/01-00d4aa?style=for-the-badge" alt="01"/> &nbsp; FPGA Servo Motor Control System
+### <img src="https://img.shields.io/badge/01-c678dd?style=for-the-badge" alt="01"/> &nbsp; FPGA Servo Motor Control System
 
-<img src="https://img.shields.io/badge/Cyclone_V_DE1--SoC-00d4aa?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Verilog_HDL-00d4aa?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Quartus_Prime_22.1-00d4aa?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/50_MHz-00d4aa?style=flat-square" alt=""/>
+<img src="https://img.shields.io/badge/Cyclone_V_DE1--SoC-c678dd?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Verilog_HDL-c678dd?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Quartus_Prime_22.1-c678dd?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/50_MHz-c678dd?style=flat-square" alt=""/>
 
 ```mermaid
 graph TD
-    subgraph CYCLONE_V["<b>Cyclone V DE1-SoC &bull; FPGA Fabric @ 50 MHz</b>"]
-        direction TB
-        FSM["<b>Sweep FSM</b><br/>Multi-state controller"]
-        PWM["<b>PWM Generator</b><br/>20-bit counter &bull; 50 Hz"]
-        LCD["<b>LCD Driver</b><br/>ILI9341 &bull; 240x320<br/>16-bit parallel"]
-        AXI["<b>AXI4-Lite Slave</b><br/>4 registers &bull; W1C IRQ<br/>GIC SPI #72"]
+    subgraph FPGA["FPGA Fabric @ 50 MHz"]
+        FSM["Sweep FSM\nMulti-state controller"]
+        PWM["PWM Generator\n20-bit counter, 50 Hz"]
+        LCD["LCD Driver\nILI9341 240x320\n16-bit parallel"]
+        AXI["AXI4-Lite Slave\n4 registers, W1C IRQ\nGIC SPI no.72"]
     end
 
-    subgraph HPS["<b>HPS ARM Cortex-A9</b>"]
-        APP["Runtime PWM control<br/>/dev/mem"]
+    subgraph HPS["HPS ARM Cortex-A9"]
+        APP["Runtime PWM control\nvia /dev/mem"]
     end
 
-    FSM -->|"duty/period"| PWM
-    FSM -->|"angle data"| LCD
-    PWM -->|"PWM signal"| SERVO["<b>Servo Motor</b>"]
-    APP -->|"AXI4-Lite bus"| AXI
-    AXI -->|"config"| FSM
-    AXI -.->|"IRQ"| APP
+    FSM -- "duty/period" --> PWM
+    FSM -- "angle" --> LCD
+    PWM -- "PWM out" --> SERVO(["Servo Motor"])
+    APP -- "AXI4-Lite" --> AXI
+    AXI -- "config" --> FSM
+    AXI -. "IRQ" .-> APP
 
-    style CYCLONE_V fill:#0a2e2a,stroke:#00d4aa,stroke-width:2px,color:#ffffff
-    style HPS fill:#0a1e2e,stroke:#00b4d8,stroke-width:2px,color:#ffffff
-    style FSM fill:#00d4aa,stroke:#00d4aa,color:#0d1117
-    style PWM fill:#00d4aa,stroke:#00d4aa,color:#0d1117
-    style LCD fill:#00d4aa,stroke:#00d4aa,color:#0d1117
-    style AXI fill:#00b4d8,stroke:#00b4d8,color:#0d1117
-    style APP fill:#00b4d8,stroke:#00b4d8,color:#0d1117
-    style SERVO fill:#ffffff,stroke:#00d4aa,stroke-width:2px,color:#0d1117
+    classDef fpgaBlock fill:#c678dd,stroke:#c678dd,color:#1e1e2e
+    classDef hpsBlock fill:#61afef,stroke:#61afef,color:#1e1e2e
+    classDef extBlock fill:#e5c07b,stroke:#e5c07b,color:#1e1e2e
+    classDef fpgaBg fill:#2d2040,stroke:#c678dd,stroke-width:2px,color:#e0e0e0
+    classDef hpsBg fill:#1e2d40,stroke:#61afef,stroke-width:2px,color:#e0e0e0
+
+    class FSM,PWM,LCD,AXI fpgaBlock
+    class APP hpsBlock
+    class SERVO extBlock
+    class FPGA fpgaBg
+    class HPS hpsBg
 ```
 
 **~900 lines of synthesizable Verilog. Zero IP cores. Zero soft processors.**
@@ -162,57 +164,50 @@ graph TD
 <table>
 <tr><td>
 
-### <img src="https://img.shields.io/badge/02-00b4d8?style=for-the-badge" alt="02"/> &nbsp; CAN Bus Sensor Fusion Platform
+### <img src="https://img.shields.io/badge/02-61afef?style=for-the-badge" alt="02"/> &nbsp; CAN Bus Sensor Fusion Platform
 
-<img src="https://img.shields.io/badge/STM32F4-00b4d8?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Cyclone_V_SoC-00b4d8?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Verilog-00b4d8?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/CAN_2.0B-00b4d8?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/AXI4--Lite-00b4d8?style=flat-square" alt=""/>
+<img src="https://img.shields.io/badge/STM32F4-61afef?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Cyclone_V_SoC-61afef?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Verilog-61afef?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/CAN_2.0B-61afef?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/AXI4--Lite-61afef?style=flat-square" alt=""/>
 
 ```mermaid
 graph LR
-    subgraph SENSOR["<b>STM32F4 Sensor Node</b>"]
+    subgraph SENSOR["STM32F4 Sensor Node"]
         direction TB
-        IMU["<b>MPU6050</b><br/>6-axis IMU"]
-        BMP["<b>BMP280</b><br/>Temp / Pressure"]
-        MCU["<b>STM32 Cortex-M4</b><br/>ISR-driven bare-metal<br/>I2C @ 400 kHz &bull; 100 Hz"]
-        CAN_TX["<b>MCP2515 + TJA1050</b><br/>CAN Controller"]
+        IMU["MPU6050\n6-axis IMU"] --> MCU
+        BMP["BMP280\nTemp + Pressure"] --> MCU
+        MCU["STM32 Cortex-M4\nISR-driven, bare-metal\nI2C 400kHz, 100Hz"] --> CAN_TX["MCP2515\n+ TJA1050"]
     end
 
-    subgraph FPGA["<b>Cyclone V &bull; FPGA Fabric</b>"]
+    subgraph FPGA_FAB["Cyclone V FPGA Fabric"]
         direction TB
-        SPI["<b>SPI Master</b><br/>Controller"]
-        PARSE["<b>CAN Frame</b><br/>Parser"]
-        FIR["<b>8-Tap FIR Filter</b><br/>Pipelined &bull; Configurable"]
-        TS["<b>HW Timestamp</b><br/>1 &mu;s resolution"]
+        SPI["SPI Master"] --> PARSE["CAN Frame\nParser"]
+        PARSE --> FIR["8-Tap FIR Filter\nPipelined"]
+        FIR --> TS["HW Timestamp\n1us resolution"]
     end
 
-    subgraph HPS["<b>HPS ARM Cortex-A9 (Linux)</b>"]
-        MON["<b>can_monitor</b><br/>mmap @ 0xFF200000<br/>CSV logging &bull; 7-seg stats"]
+    subgraph HPS["HPS Cortex-A9 Linux"]
+        MON["can_monitor\nmmap 0xFF200000\nCSV + 7-seg stats"]
     end
 
-    IMU -->|"I2C"| MCU
-    BMP -->|"I2C"| MCU
-    MCU --> CAN_TX
-    CAN_TX ==>|"CAN 2.0B<br/>500 kbps"| SPI
-    SPI --> PARSE
-    PARSE --> FIR
-    FIR --> TS
-    TS -->|"AXI4-Lite"| MON
+    CAN_TX == "CAN 2.0B\n500 kbps" ==> SPI
+    TS -- "AXI4-Lite" --> MON
 
-    style SENSOR fill:#1a1a2e,stroke:#00b4d8,stroke-width:2px,color:#ffffff
-    style FPGA fill:#0a2e2a,stroke:#00d4aa,stroke-width:2px,color:#ffffff
-    style HPS fill:#0a1e2e,stroke:#00b4d8,stroke-width:2px,color:#ffffff
-    style IMU fill:#00b4d8,stroke:#00b4d8,color:#0d1117
-    style BMP fill:#00b4d8,stroke:#00b4d8,color:#0d1117
-    style MCU fill:#00b4d8,stroke:#00b4d8,color:#0d1117
-    style CAN_TX fill:#00b4d8,stroke:#00b4d8,color:#0d1117
-    style SPI fill:#00d4aa,stroke:#00d4aa,color:#0d1117
-    style PARSE fill:#00d4aa,stroke:#00d4aa,color:#0d1117
-    style FIR fill:#00d4aa,stroke:#00d4aa,color:#0d1117
-    style TS fill:#00d4aa,stroke:#00d4aa,color:#0d1117
-    style MON fill:#00b4d8,stroke:#00b4d8,color:#0d1117
+    classDef sensorBlock fill:#e06c75,stroke:#e06c75,color:#1e1e2e
+    classDef fpgaBlock fill:#c678dd,stroke:#c678dd,color:#1e1e2e
+    classDef hpsBlock fill:#61afef,stroke:#61afef,color:#1e1e2e
+    classDef sensorBg fill:#3a2028,stroke:#e06c75,stroke-width:2px,color:#e0e0e0
+    classDef fpgaBg fill:#2d2040,stroke:#c678dd,stroke-width:2px,color:#e0e0e0
+    classDef hpsBg fill:#1e2d40,stroke:#61afef,stroke-width:2px,color:#e0e0e0
+
+    class IMU,BMP,MCU,CAN_TX sensorBlock
+    class SPI,PARSE,FIR,TS fpgaBlock
+    class MON hpsBlock
+    class SENSOR sensorBg
+    class FPGA_FAB fpgaBg
+    class HPS hpsBg
 ```
 
-- Custom Verilog IP — **90% latency reduction** vs software implementation
-- HW timestamping + FPGA pipeline — **35% data throughput improvement**
+- Custom Verilog IP -- **90% latency reduction** vs software implementation
+- HW timestamping + FPGA pipeline -- **35% data throughput improvement**
 - Real 2-node CAN 2.0B network at 500 kbps with hardware filtering
 
 <details>
@@ -255,40 +250,37 @@ All standard 11-bit IDs @ 500 kbps
 <table>
 <tr><td>
 
-### <img src="https://img.shields.io/badge/03-00d4aa?style=for-the-badge" alt="03"/> &nbsp; AI Thermal Prediction — EV Inverter
+### <img src="https://img.shields.io/badge/03-98c379?style=for-the-badge" alt="03"/> &nbsp; AI Thermal Prediction — EV Inverter
 
-<img src="https://img.shields.io/badge/MSc_Dissertation-00d4aa?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/STM32-00d4aa?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/MATLAB%2FSimulink-00d4aa?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Edge_AI-00d4aa?style=flat-square" alt=""/>
+<img src="https://img.shields.io/badge/MSc_Dissertation-98c379?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/STM32-98c379?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/MATLAB%2FSimulink-98c379?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Edge_AI-98c379?style=flat-square" alt=""/>
 
 ```mermaid
 graph LR
-    subgraph MODEL["<b>MATLAB/Simulink Modelling</b>"]
+    subgraph MODEL["MATLAB/Simulink Modelling"]
         direction TB
-        INV["<b>SPWM Inverter</b><br/>600V DC &bull; 10 kHz<br/>35A peak"]
-        RC["<b>Foster RC Network</b><br/>4-layer thermal model<br/>R1C1 &rarr; R2C2 &rarr; R3C3 &rarr; R4C4"]
-        TJ["<b>Tj</b><br/>Junction temperature<br/>&plusmn;3&ndash;5&deg;C accuracy"]
+        INV["SPWM Inverter\n600V DC, 10 kHz\n35A peak"] --> RC
+        RC["Foster RC Network\n4-layer thermal model"] --> TJ
+        TJ["Tj: Junction Temp\n+/- 3-5C accuracy"]
     end
 
-    subgraph DEPLOY["<b>Edge Deployment</b>"]
+    subgraph DEPLOY["Edge Deployment"]
         direction TB
-        TRAIN["<b>Trained Model</b><br/>Regression"]
-        QUANT["<b>X-CUBE-AI / CMSIS-NN</b><br/>Quantised int8/float16"]
-        STM["<b>STM32 Cortex-M</b><br/>&lt; 1 ms inference<br/>95%+ faster than sim"]
+        TRAIN["Trained Regression\nModel"] --> QUANT
+        QUANT["X-CUBE-AI\nCMSIS-NN\nQuantised"] --> STM
+        STM["STM32 Cortex-M\nInference < 1ms\n95%+ faster"]
     end
 
-    INV -->|"P_loss"| RC
-    RC --> TJ
-    TJ -.->|"training data"| TRAIN
-    TRAIN --> QUANT
-    QUANT --> STM
+    TJ -. "training\ndata" .-> TRAIN
 
-    style MODEL fill:#0a2e2a,stroke:#00d4aa,stroke-width:2px,color:#ffffff
-    style DEPLOY fill:#0a1e2e,stroke:#00b4d8,stroke-width:2px,color:#ffffff
-    style INV fill:#00d4aa,stroke:#00d4aa,color:#0d1117
-    style RC fill:#00d4aa,stroke:#00d4aa,color:#0d1117
-    style TJ fill:#00d4aa,stroke:#00d4aa,color:#0d1117
-    style TRAIN fill:#00b4d8,stroke:#00b4d8,color:#0d1117
-    style QUANT fill:#00b4d8,stroke:#00b4d8,color:#0d1117
-    style STM fill:#00b4d8,stroke:#00b4d8,color:#0d1117
+    classDef modelBlock fill:#98c379,stroke:#98c379,color:#1e1e2e
+    classDef deployBlock fill:#e5c07b,stroke:#e5c07b,color:#1e1e2e
+    classDef modelBg fill:#1e3028,stroke:#98c379,stroke-width:2px,color:#e0e0e0
+    classDef deployBg fill:#3a3020,stroke:#e5c07b,stroke-width:2px,color:#e0e0e0
+
+    class INV,RC,TJ modelBlock
+    class TRAIN,QUANT,STM deployBlock
+    class MODEL modelBg
+    class DEPLOY deployBg
 ```
 
 - 4-layer Foster RC thermal network — validated **±3–5°C** vs datasheet
@@ -303,40 +295,40 @@ graph LR
 <table>
 <tr><td>
 
-### <img src="https://img.shields.io/badge/04-00b4d8?style=for-the-badge" alt="04"/> &nbsp; STM32 USB Signal Analyser
+### <img src="https://img.shields.io/badge/04-e06c75?style=for-the-badge" alt="04"/> &nbsp; STM32 USB Signal Analyser
 
-<img src="https://img.shields.io/badge/STM32F411-00b4d8?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Bare--metal_C-00b4d8?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/USB_CDC-00b4d8?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/DMA-00b4d8?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Python_Host-00b4d8?style=flat-square" alt=""/>
+<img src="https://img.shields.io/badge/STM32F411-e06c75?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Bare--metal_C-e06c75?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/USB_CDC-e06c75?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/DMA-e06c75?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Python_Host-e06c75?style=flat-square" alt=""/>
 
 ```mermaid
 graph LR
-    SIG["<b>Analog/Digital<br/>Signal Input</b>"]
+    SIG(["Analog/Digital\nSignal Input"])
 
-    subgraph STM32["<b>STM32F411 Black Pill</b>"]
+    subgraph MCU["STM32F411 Black Pill"]
         direction TB
-        ADC["<b>ADC + Timer Trigger</b><br/>12-bit &bull; up to 2.4 MSPS"]
-        DMA["<b>DMA Engine</b><br/>Double-buffered"]
-        BUF["<b>Ring Buffer</b><br/>Zero-copy continuous"]
-        USB["<b>USB CDC</b><br/>High-throughput TX"]
+        ADC["ADC + Timer\n12-bit, 2.4 MSPS"] --> DMA
+        DMA["DMA Engine\nDouble-buffered"] --> BUF
+        BUF["Ring Buffer\nZero-copy"] --> USB
+        USB["USB CDC TX"]
     end
 
-    subgraph HOST["<b>Host PC</b>"]
-        PY["<b>Python App</b><br/>Real-time FFT<br/>Oscilloscope display"]
+    subgraph HOST["Host PC"]
+        PY["Python App\nReal-time FFT\nOscilloscope"]
     end
 
-    SIG -->|"ADC_IN"| ADC
-    ADC --> DMA
-    DMA --> BUF
-    BUF --> USB
-    USB ==>|"USB CDC"| PY
+    SIG -- "ADC_IN" --> ADC
+    USB == "USB CDC" ==> PY
 
-    style STM32 fill:#1a1a2e,stroke:#00b4d8,stroke-width:2px,color:#ffffff
-    style HOST fill:#0a2e2a,stroke:#00d4aa,stroke-width:2px,color:#ffffff
-    style SIG fill:#ffffff,stroke:#00b4d8,stroke-width:2px,color:#0d1117
-    style ADC fill:#00b4d8,stroke:#00b4d8,color:#0d1117
-    style DMA fill:#00b4d8,stroke:#00b4d8,color:#0d1117
-    style BUF fill:#00b4d8,stroke:#00b4d8,color:#0d1117
-    style USB fill:#00b4d8,stroke:#00b4d8,color:#0d1117
-    style PY fill:#00d4aa,stroke:#00d4aa,color:#0d1117
+    classDef mcuBlock fill:#e06c75,stroke:#e06c75,color:#1e1e2e
+    classDef hostBlock fill:#98c379,stroke:#98c379,color:#1e1e2e
+    classDef extBlock fill:#e5c07b,stroke:#e5c07b,color:#1e1e2e
+    classDef mcuBg fill:#3a2028,stroke:#e06c75,stroke-width:2px,color:#e0e0e0
+    classDef hostBg fill:#1e3028,stroke:#98c379,stroke-width:2px,color:#e0e0e0
+
+    class ADC,DMA,BUF,USB mcuBlock
+    class PY hostBlock
+    class SIG extBlock
+    class MCU mcuBg
+    class HOST hostBg
 ```
 
 - Real-time oscilloscope + FFT analyser on bare-metal STM32
@@ -351,49 +343,34 @@ graph LR
 ## `> cat /proc/mcu/pinout`
 
 ```mermaid
-graph LR
-    subgraph STM32F4["<b>STM32F4 Cortex-M4F @ 100 MHz &bull; FPU &bull; 512 KB Flash</b>"]
-        direction LR
-        subgraph PINS["<b>Pin Assignments</b>"]
-            direction TB
-            PA0["PA0 &rarr; ADC_IN0"]
-            PA5["PA5 &rarr; SPI1_SCK"]
-            PA6["PA6 &larr; SPI1_MISO"]
-            PA7["PA7 &rarr; SPI1_MOSI"]
-            PB4["PB4 &rarr; SPI1_CS"]
-            PB6["PB6 &rarr; I2C1_SCL"]
-            PB7["PB7 &harr; I2C1_SDA"]
-            PA9["PA9 &rarr; USART1_TX"]
-            PA10["PA10 &larr; USART1_RX"]
-            PA11["PA11 &rarr; USB_DM"]
-            PA12["PA12 &rarr; USB_DP"]
-            PB8["PB8 &rarr; TIM4_CH3"]
-            PC13["PC13 &larr; EXTI"]
-        end
+graph TD
+    subgraph MCU["STM32F4 Cortex-M4F @ 100 MHz"]
+        PA0["PA0: ADC_IN0"]
+        SPI_PINS["PA5/PA6/PA7/PB4:\nSPI1 Bus"]
+        I2C_PINS["PB6/PB7:\nI2C1 Bus"]
+        UART_PINS["PA9/PA10:\nUSART1"]
+        USB_PINS["PA11/PA12:\nUSB FS"]
+        PB8["PB8: TIM4_CH3"]
+        PC13["PC13: EXTI"]
     end
 
-    PA0 --- S1["Signal Capture"]
-    PA5 --- CAN["MCP2515 CAN"]
-    PA6 --- CAN
-    PA7 --- CAN
-    PB4 --- CAN
-    PB6 --- SENS["MPU6050 + BMP280"]
-    PB7 --- SENS
-    PA9 --- DBG["Debug Console"]
-    PA10 --- DBG
-    PA11 --- PC["Host PC"]
-    PA12 --- PC
-    PB8 --- PWM["PWM Output"]
-    PC13 --- CAN
+    PA0 --> CAP["Signal Capture\nADC 12-bit 2.4MSPS"]
+    SPI_PINS --> MCP["MCP2515\nCAN Controller"]
+    I2C_PINS --> SENS["MPU6050 + BMP280\nIMU + Environmental"]
+    UART_PINS --> DBG["Debug Console"]
+    USB_PINS --> PC["Host PC\nUSB CDC"]
+    PB8 --> PWMO["PWM Output\nServo Control"]
+    PC13 --> INT["MCP2515 /INT\nCAN RX Ready"]
 
-    style STM32F4 fill:#0a2e2a,stroke:#00d4aa,stroke-width:2px,color:#ffffff
-    style PINS fill:#0d1117,stroke:#00d4aa,stroke-width:1px,color:#ffffff
-    style S1 fill:#00d4aa,stroke:#00d4aa,color:#0d1117
-    style CAN fill:#00b4d8,stroke:#00b4d8,color:#0d1117
-    style SENS fill:#00d4aa,stroke:#00d4aa,color:#0d1117
-    style DBG fill:#555555,stroke:#555555,color:#ffffff
-    style PC fill:#00b4d8,stroke:#00b4d8,color:#0d1117
-    style PWM fill:#00d4aa,stroke:#00d4aa,color:#0d1117
+    classDef pinBlock fill:#c678dd,stroke:#c678dd,color:#1e1e2e
+    classDef periphBlock fill:#61afef,stroke:#61afef,color:#1e1e2e
+    classDef warnBlock fill:#e06c75,stroke:#e06c75,color:#1e1e2e
+    classDef mcuBg fill:#2d2040,stroke:#c678dd,stroke-width:2px,color:#e0e0e0
+
+    class PA0,SPI_PINS,I2C_PINS,UART_PINS,USB_PINS,PB8,PC13 pinBlock
+    class CAP,SENS,DBG,PC,PWMO periphBlock
+    class MCP,INT warnBlock
+    class MCU mcuBg
 ```
 
 <br>
@@ -401,25 +378,30 @@ graph LR
 ## `> cat /sys/bus/memory_map`
 
 ```mermaid
-block-beta
-    columns 1
-    block:header["<b>Cyclone V SoC Address Space</b>"]
-        columns 2
-        A["0x0000_0000"] B["SDRAM (DDR3) &bull; 1 GB<br/>Linux kernel + userspace"]
-        C["0xC000_0000"] D["FPGA Slaves<br/>HPS-to-FPGA bridge &bull; 960 MB"]
-        E["0xFF20_0000"] F["Lightweight Bridge<br/>STATUS &bull; CAN_ID &bull; TIMESTAMP<br/>ACCEL_FILT &bull; FIR_COEFF"]
-        G["0xFFD0_0000"] H["HPS Peripherals<br/>UART &bull; SPI &bull; I2C &bull; GPIO"]
+graph TD
+    subgraph SOC["Cyclone V SoC Address Space"]
+        direction TB
+        SDRAM["0x0000_0000 - 0x3FFF_FFFF\nSDRAM DDR3 - 1 GB\nLinux kernel + userspace"]
+        FPGA_S["0xC000_0000 - 0xFBFF_FFFF\nFPGA Slaves\nHPS-to-FPGA bridge - 960 MB"]
+        LW["0xFF20_0000 - 0xFF3F_FFFF\nLightweight Bridge\nSTATUS | CAN_ID | TIMESTAMP\nACCEL_FILT | FIR_COEFF"]
+        PERIPH["0xFFD0_0000 - 0xFFFF_FFFF\nHPS Peripherals\nUART | SPI | I2C | GPIO"]
     end
 
-    style header fill:#0d1117,stroke:#00d4aa,stroke-width:2px,color:#ffffff
-    style A fill:#00d4aa,stroke:#00d4aa,color:#0d1117
-    style B fill:#0a2e2a,stroke:#00d4aa,color:#ffffff
-    style C fill:#00b4d8,stroke:#00b4d8,color:#0d1117
-    style D fill:#0a1e2e,stroke:#00b4d8,color:#ffffff
-    style E fill:#00d4aa,stroke:#00d4aa,color:#0d1117
-    style F fill:#0a2e2a,stroke:#00d4aa,color:#ffffff
-    style G fill:#00b4d8,stroke:#00b4d8,color:#0d1117
-    style H fill:#0a1e2e,stroke:#00b4d8,color:#ffffff
+    SDRAM ~~~ FPGA_S
+    FPGA_S ~~~ LW
+    LW ~~~ PERIPH
+
+    classDef ramBlock fill:#61afef,stroke:#61afef,color:#1e1e2e
+    classDef fpgaBlock fill:#c678dd,stroke:#c678dd,color:#1e1e2e
+    classDef lwBlock fill:#98c379,stroke:#98c379,color:#1e1e2e
+    classDef perBlock fill:#e5c07b,stroke:#e5c07b,color:#1e1e2e
+    classDef socBg fill:#1e1e2e,stroke:#c678dd,stroke-width:2px,color:#e0e0e0
+
+    class SDRAM ramBlock
+    class FPGA_S fpgaBlock
+    class LW lwBlock
+    class PERIPH perBlock
+    class SOC socBg
 ```
 
 <br>
@@ -446,10 +428,10 @@ block-beta
 ## `> cat /etc/certs`
 
 <p>
-  <img src="https://img.shields.io/badge/UK_Amateur_Radio_M7KVD-00d4aa?style=for-the-badge&logo=radio&logoColor=0d1117" alt="Radio"/>
-  <img src="https://img.shields.io/badge/GE_Aerospace_EE_Sim-00b4d8?style=for-the-badge&logo=ge&logoColor=white" alt="GE"/>
-  <img src="https://img.shields.io/badge/Power_Electronics-00d4aa?style=for-the-badge&logo=coursera&logoColor=0d1117" alt="Power"/>
-  <img src="https://img.shields.io/badge/MATLAB_Onramp-00b4d8?style=for-the-badge&logo=mathworks&logoColor=white" alt="MATLAB"/>
+  <img src="https://img.shields.io/badge/UK_Amateur_Radio_M7KVD-c678dd?style=for-the-badge&logo=radio&logoColor=fff" alt="Radio"/>
+  <img src="https://img.shields.io/badge/GE_Aerospace_EE_Sim-61afef?style=for-the-badge&logo=ge&logoColor=white" alt="GE"/>
+  <img src="https://img.shields.io/badge/Power_Electronics-98c379?style=for-the-badge&logo=coursera&logoColor=fff" alt="Power"/>
+  <img src="https://img.shields.io/badge/MATLAB_Onramp-e5c07b?style=for-the-badge&logo=mathworks&logoColor=fff" alt="MATLAB"/>
 </p>
 
 <br>
@@ -457,12 +439,12 @@ block-beta
 ## `> top -b | head`
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=sanjusaravananx2-hub&show_icons=true&theme=react&bg_color=0d1117&title_color=00d4aa&icon_color=00b4d8&text_color=c9d1d9&border_color=30363d" height="180"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=sanjusaravananx2-hub&theme=react&background=0d1117&ring=00d4aa&fire=00d4aa&currStreakLabel=00d4aa&sideLabels=c9d1d9&dates=8b949e&border=30363d" height="180"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=sanjusaravananx2-hub&show_icons=true&theme=one_dark_pro&bg_color=1e1e2e&title_color=c678dd&icon_color=61afef&text_color=abb2bf&border_color=3e4452" height="180"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com?user=sanjusaravananx2-hub&theme=one-dark-pro&background=1e1e2e&ring=c678dd&fire=e06c75&currStreakLabel=c678dd&sideLabels=abb2bf&dates=636d83&border=3e4452" height="180"/>
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sanjusaravananx2-hub&layout=compact&theme=react&bg_color=0d1117&title_color=00d4aa&text_color=c9d1d9&border_color=30363d&langs_count=8" height="160"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sanjusaravananx2-hub&layout=compact&theme=one_dark_pro&bg_color=1e1e2e&title_color=c678dd&text_color=abb2bf&border_color=3e4452&langs_count=8" height="160"/>
 </p>
 
 <br>
@@ -470,17 +452,17 @@ block-beta
 ## `> tail -f /var/log/activity.log`
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=sanjusaravananx2-hub&theme=react-dark&bg_color=0d1117&color=00d4aa&line=00b4d8&point=ffffff&area=true&area_color=00d4aa&hide_border=false" width="95%"/>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=sanjusaravananx2-hub&theme=one-dark&bg_color=1e1e2e&color=c678dd&line=61afef&point=e06c75&area=true&area_color=c678dd&hide_border=false" width="95%"/>
 </p>
 
 ---
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:00d4aa,100:00b4d8&height=120&section=footer" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=120&section=footer" width="100%"/>
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=sanjusaravananx2-hub&style=for-the-badge&color=00d4aa&label=PROFILE+VIEWS" alt="views"/>
+  <img src="https://komarev.com/ghpvc/?username=sanjusaravananx2-hub&style=for-the-badge&color=c678dd&label=PROFILE+VIEWS" alt="views"/>
 </p>
 
 <p align="center">
