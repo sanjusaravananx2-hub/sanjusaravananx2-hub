@@ -105,33 +105,35 @@ static const embedded_engineer_t me = {
 
 <img src="https://img.shields.io/badge/Cyclone_V_DE1--SoC-00d4aa?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Verilog_HDL-00d4aa?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Quartus_Prime_22.1-00d4aa?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/50_MHz-00d4aa?style=flat-square" alt=""/>
 
-```
-         +-----------+    +-----------+
-         | Sweep FSM |    |LCD Driver |
-         | multi-    |--->|ILI9341    |
-         | state     |    |240x320 px |
-         +-----+-----+    +-----------+
-               |
-               v
-         +-----------+
-         | PWM Gen   |
-         | 20-bit    |-----> [SERVO]
-         | 50 Hz     |
-         +-----------+
-               ^
-               | config
-         +-----------+
-         |AXI4-Lite  |
-         |Slave      |
-         |4 regs,W1C |
-         |IRQ->GIC#72|
-         +-----+-----+
-               |
-         +-----v-----+
-         |HPS        |
-         |Cortex-A9  |
-         |/dev/mem   |
-         +-----------+
+```mermaid
+graph TD
+    subgraph CYCLONE_V["<b>Cyclone V DE1-SoC &bull; FPGA Fabric @ 50 MHz</b>"]
+        direction TB
+        FSM["<b>Sweep FSM</b><br/>Multi-state controller"]
+        PWM["<b>PWM Generator</b><br/>20-bit counter &bull; 50 Hz"]
+        LCD["<b>LCD Driver</b><br/>ILI9341 &bull; 240x320<br/>16-bit parallel"]
+        AXI["<b>AXI4-Lite Slave</b><br/>4 registers &bull; W1C IRQ<br/>GIC SPI #72"]
+    end
+
+    subgraph HPS["<b>HPS ARM Cortex-A9</b>"]
+        APP["Runtime PWM control<br/>/dev/mem"]
+    end
+
+    FSM -->|"duty/period"| PWM
+    FSM -->|"angle data"| LCD
+    PWM -->|"PWM signal"| SERVO["<b>Servo Motor</b>"]
+    APP -->|"AXI4-Lite bus"| AXI
+    AXI -->|"config"| FSM
+    AXI -.->|"IRQ"| APP
+
+    style CYCLONE_V fill:#0a2e2a,stroke:#00d4aa,stroke-width:2px,color:#ffffff
+    style HPS fill:#0a1e2e,stroke:#00b4d8,stroke-width:2px,color:#ffffff
+    style FSM fill:#00d4aa,stroke:#00d4aa,color:#0d1117
+    style PWM fill:#00d4aa,stroke:#00d4aa,color:#0d1117
+    style LCD fill:#00d4aa,stroke:#00d4aa,color:#0d1117
+    style AXI fill:#00b4d8,stroke:#00b4d8,color:#0d1117
+    style APP fill:#00b4d8,stroke:#00b4d8,color:#0d1117
+    style SERVO fill:#ffffff,stroke:#00d4aa,stroke-width:2px,color:#0d1117
 ```
 
 **~900 lines of synthesizable Verilog. Zero IP cores. Zero soft processors.**
@@ -164,30 +166,49 @@ static const embedded_engineer_t me = {
 
 <img src="https://img.shields.io/badge/STM32F4-00b4d8?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Cyclone_V_SoC-00b4d8?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Verilog-00b4d8?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/CAN_2.0B-00b4d8?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/AXI4--Lite-00b4d8?style=flat-square" alt=""/>
 
-```
-  SENSOR NODE               BUS        PROCESSING NODE
-  ============            =======      ===================
+```mermaid
+graph LR
+    subgraph SENSOR["<b>STM32F4 Sensor Node</b>"]
+        direction TB
+        IMU["<b>MPU6050</b><br/>6-axis IMU"]
+        BMP["<b>BMP280</b><br/>Temp / Pressure"]
+        MCU["<b>STM32 Cortex-M4</b><br/>ISR-driven bare-metal<br/>I2C @ 400 kHz &bull; 100 Hz"]
+        CAN_TX["<b>MCP2515 + TJA1050</b><br/>CAN Controller"]
+    end
 
-  +--------+                            FPGA FABRIC
-  |MPU6050 |-+  I2C                    +--------------+
-  +--------+ +->+--------+            |SPI Master    |
-  +--------+ |  | STM32  |  CAN 2.0B  |   v          |
-  |BMP280  |-+  |Cortex- |  500kbps   |CAN Parser    |
-  +--------+    |M4      |----------->|   v          |
-                |ISR-    |  CANH/CANL  |FIR Filter   |
-                |driven  |            |8-tap,pipelined|
-                +---+----+            |   v          |
-                    |                  |HW Timestamp  |
-                    v                  +------+-------+
-               +--------+                    |
-               |MCP2515 |            AXI4-Lite Bus
-               |TJA1050 |                    |
-               +--------+             +------v-------+
-                                      |HPS Cortex-A9 |
-                                      |Linux         |
-                                      |mmap@FF200000 |
-                                      |CSV + 7-seg   |
-                                      +--------------+
+    subgraph FPGA["<b>Cyclone V &bull; FPGA Fabric</b>"]
+        direction TB
+        SPI["<b>SPI Master</b><br/>Controller"]
+        PARSE["<b>CAN Frame</b><br/>Parser"]
+        FIR["<b>8-Tap FIR Filter</b><br/>Pipelined &bull; Configurable"]
+        TS["<b>HW Timestamp</b><br/>1 &mu;s resolution"]
+    end
+
+    subgraph HPS["<b>HPS ARM Cortex-A9 (Linux)</b>"]
+        MON["<b>can_monitor</b><br/>mmap @ 0xFF200000<br/>CSV logging &bull; 7-seg stats"]
+    end
+
+    IMU -->|"I2C"| MCU
+    BMP -->|"I2C"| MCU
+    MCU --> CAN_TX
+    CAN_TX ==>|"CAN 2.0B<br/>500 kbps"| SPI
+    SPI --> PARSE
+    PARSE --> FIR
+    FIR --> TS
+    TS -->|"AXI4-Lite"| MON
+
+    style SENSOR fill:#1a1a2e,stroke:#00b4d8,stroke-width:2px,color:#ffffff
+    style FPGA fill:#0a2e2a,stroke:#00d4aa,stroke-width:2px,color:#ffffff
+    style HPS fill:#0a1e2e,stroke:#00b4d8,stroke-width:2px,color:#ffffff
+    style IMU fill:#00b4d8,stroke:#00b4d8,color:#0d1117
+    style BMP fill:#00b4d8,stroke:#00b4d8,color:#0d1117
+    style MCU fill:#00b4d8,stroke:#00b4d8,color:#0d1117
+    style CAN_TX fill:#00b4d8,stroke:#00b4d8,color:#0d1117
+    style SPI fill:#00d4aa,stroke:#00d4aa,color:#0d1117
+    style PARSE fill:#00d4aa,stroke:#00d4aa,color:#0d1117
+    style FIR fill:#00d4aa,stroke:#00d4aa,color:#0d1117
+    style TS fill:#00d4aa,stroke:#00d4aa,color:#0d1117
+    style MON fill:#00b4d8,stroke:#00b4d8,color:#0d1117
 ```
 
 - Custom Verilog IP — **90% latency reduction** vs software implementation
@@ -238,26 +259,36 @@ All standard 11-bit IDs @ 500 kbps
 
 <img src="https://img.shields.io/badge/MSc_Dissertation-00d4aa?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/STM32-00d4aa?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/MATLAB%2FSimulink-00d4aa?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Edge_AI-00d4aa?style=flat-square" alt=""/>
 
-```
-  MODELLING                    DEPLOYMENT
-  ==========                   ===========
+```mermaid
+graph LR
+    subgraph MODEL["<b>MATLAB/Simulink Modelling</b>"]
+        direction TB
+        INV["<b>SPWM Inverter</b><br/>600V DC &bull; 10 kHz<br/>35A peak"]
+        RC["<b>Foster RC Network</b><br/>4-layer thermal model<br/>R1C1 &rarr; R2C2 &rarr; R3C3 &rarr; R4C4"]
+        TJ["<b>Tj</b><br/>Junction temperature<br/>&plusmn;3&ndash;5&deg;C accuracy"]
+    end
 
-  +----------------+           +----------------+
-  | SPWM Inverter  |           | Trained Model  |
-  | 600V, 10kHz    |  Ploss    |    |           |
-  | 35A peak       |---->+     |    | X-CUBE-AI |
-  +----------------+     |     |    | CMSIS-NN  |
-                         v     |    v           |
-  +----+ +----+ +----+ +----+ | +------------+ |
-  | R1 | | R2 | | R3 | | R4 | | |STM32       | |
-  | C1 | | C2 | | C3 | | C4 | | |Cortex-M    | |
-  +--+-+ +--+-+ +--+-+ +--+-+ | |<1ms infer. | |
-     |      |      |      |   | |95%+ faster | |
-     +------+------+------+   | +------------+ |
-            |                  +----------------+
-            v
-     Tj (junction temp)
-     +/- 3-5C accuracy
+    subgraph DEPLOY["<b>Edge Deployment</b>"]
+        direction TB
+        TRAIN["<b>Trained Model</b><br/>Regression"]
+        QUANT["<b>X-CUBE-AI / CMSIS-NN</b><br/>Quantised int8/float16"]
+        STM["<b>STM32 Cortex-M</b><br/>&lt; 1 ms inference<br/>95%+ faster than sim"]
+    end
+
+    INV -->|"P_loss"| RC
+    RC --> TJ
+    TJ -.->|"training data"| TRAIN
+    TRAIN --> QUANT
+    QUANT --> STM
+
+    style MODEL fill:#0a2e2a,stroke:#00d4aa,stroke-width:2px,color:#ffffff
+    style DEPLOY fill:#0a1e2e,stroke:#00b4d8,stroke-width:2px,color:#ffffff
+    style INV fill:#00d4aa,stroke:#00d4aa,color:#0d1117
+    style RC fill:#00d4aa,stroke:#00d4aa,color:#0d1117
+    style TJ fill:#00d4aa,stroke:#00d4aa,color:#0d1117
+    style TRAIN fill:#00b4d8,stroke:#00b4d8,color:#0d1117
+    style QUANT fill:#00b4d8,stroke:#00b4d8,color:#0d1117
+    style STM fill:#00b4d8,stroke:#00b4d8,color:#0d1117
 ```
 
 - 4-layer Foster RC thermal network — validated **±3–5°C** vs datasheet
@@ -276,22 +307,36 @@ All standard 11-bit IDs @ 500 kbps
 
 <img src="https://img.shields.io/badge/STM32F411-00b4d8?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Bare--metal_C-00b4d8?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/USB_CDC-00b4d8?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/DMA-00b4d8?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Python_Host-00b4d8?style=flat-square" alt=""/>
 
-```
-  INPUT            STM32F411             HOST
-  =====            =========             ====
+```mermaid
+graph LR
+    SIG["<b>Analog/Digital<br/>Signal Input</b>"]
 
-               +---------------+
-  Analog/      | Timer-trigger |     +---------+
-  Digital ---->| ADC + DMA     | USB | Python  |
-  Signal       |     |         | CDC | FFT     |
-               |     v         |---->| Scope   |
-               | Ring Buffer   |     | Tool    |
-               | double-buffer |     +---------+
-               | zero-copy     |
-               +---------------+
+    subgraph STM32["<b>STM32F411 Black Pill</b>"]
+        direction TB
+        ADC["<b>ADC + Timer Trigger</b><br/>12-bit &bull; up to 2.4 MSPS"]
+        DMA["<b>DMA Engine</b><br/>Double-buffered"]
+        BUF["<b>Ring Buffer</b><br/>Zero-copy continuous"]
+        USB["<b>USB CDC</b><br/>High-throughput TX"]
+    end
 
-               12-bit ADC
-               up to 2.4 MSPS
+    subgraph HOST["<b>Host PC</b>"]
+        PY["<b>Python App</b><br/>Real-time FFT<br/>Oscilloscope display"]
+    end
+
+    SIG -->|"ADC_IN"| ADC
+    ADC --> DMA
+    DMA --> BUF
+    BUF --> USB
+    USB ==>|"USB CDC"| PY
+
+    style STM32 fill:#1a1a2e,stroke:#00b4d8,stroke-width:2px,color:#ffffff
+    style HOST fill:#0a2e2a,stroke:#00d4aa,stroke-width:2px,color:#ffffff
+    style SIG fill:#ffffff,stroke:#00b4d8,stroke-width:2px,color:#0d1117
+    style ADC fill:#00b4d8,stroke:#00b4d8,color:#0d1117
+    style DMA fill:#00b4d8,stroke:#00b4d8,color:#0d1117
+    style BUF fill:#00b4d8,stroke:#00b4d8,color:#0d1117
+    style USB fill:#00b4d8,stroke:#00b4d8,color:#0d1117
+    style PY fill:#00d4aa,stroke:#00d4aa,color:#0d1117
 ```
 
 - Real-time oscilloscope + FFT analyser on bare-metal STM32
@@ -305,63 +350,76 @@ All standard 11-bit IDs @ 500 kbps
 
 ## `> cat /proc/mcu/pinout`
 
-```
-  STM32F4 PIN MAP (across all projects)
-  +=============================================+
-  |                                             |
-  |  PA0  o--- ADC_IN0 ----> Signal Capture     |
-  |  PA5  o--- SPI1_SCK ---> MCP2515 CAN        |
-  |  PA6  o--- SPI1_MISO <-- MCP2515 CAN        |
-  |  PA7  o--- SPI1_MOSI --> MCP2515 CAN        |
-  |  PA9  o--- USART1_TX --> Debug Console       |
-  |  PA10 o--- USART1_RX <-- Debug Console       |
-  |  PA11 o--- USB_DM -----> Host PC             |
-  |  PA12 o--- USB_DP -----> Host PC             |
-  |  PB4  o--- SPI1_CS ----> MCP2515 (/CS)       |
-  |  PB6  o--- I2C1_SCL ---> MPU6050 + BMP280    |
-  |  PB7  o--- I2C1_SDA <--> MPU6050 + BMP280    |
-  |  PB8  o--- TIM4_CH3 ---> PWM Output          |
-  |  PC13 o--- EXTI ------<- MCP2515 /INT         |
-  |                                             |
-  |  Cortex-M4F @ 100MHz | FPU | 512KB Flash   |
-  |  NVIC | DMA2 | 12-bit ADC @ 2.4 MSPS       |
-  +=============================================+
+```mermaid
+graph LR
+    subgraph STM32F4["<b>STM32F4 Cortex-M4F @ 100 MHz &bull; FPU &bull; 512 KB Flash</b>"]
+        direction LR
+        subgraph PINS["<b>Pin Assignments</b>"]
+            direction TB
+            PA0["PA0 &rarr; ADC_IN0"]
+            PA5["PA5 &rarr; SPI1_SCK"]
+            PA6["PA6 &larr; SPI1_MISO"]
+            PA7["PA7 &rarr; SPI1_MOSI"]
+            PB4["PB4 &rarr; SPI1_CS"]
+            PB6["PB6 &rarr; I2C1_SCL"]
+            PB7["PB7 &harr; I2C1_SDA"]
+            PA9["PA9 &rarr; USART1_TX"]
+            PA10["PA10 &larr; USART1_RX"]
+            PA11["PA11 &rarr; USB_DM"]
+            PA12["PA12 &rarr; USB_DP"]
+            PB8["PB8 &rarr; TIM4_CH3"]
+            PC13["PC13 &larr; EXTI"]
+        end
+    end
+
+    PA0 --- S1["Signal Capture"]
+    PA5 --- CAN["MCP2515 CAN"]
+    PA6 --- CAN
+    PA7 --- CAN
+    PB4 --- CAN
+    PB6 --- SENS["MPU6050 + BMP280"]
+    PB7 --- SENS
+    PA9 --- DBG["Debug Console"]
+    PA10 --- DBG
+    PA11 --- PC["Host PC"]
+    PA12 --- PC
+    PB8 --- PWM["PWM Output"]
+    PC13 --- CAN
+
+    style STM32F4 fill:#0a2e2a,stroke:#00d4aa,stroke-width:2px,color:#ffffff
+    style PINS fill:#0d1117,stroke:#00d4aa,stroke-width:1px,color:#ffffff
+    style S1 fill:#00d4aa,stroke:#00d4aa,color:#0d1117
+    style CAN fill:#00b4d8,stroke:#00b4d8,color:#0d1117
+    style SENS fill:#00d4aa,stroke:#00d4aa,color:#0d1117
+    style DBG fill:#555555,stroke:#555555,color:#ffffff
+    style PC fill:#00b4d8,stroke:#00b4d8,color:#0d1117
+    style PWM fill:#00d4aa,stroke:#00d4aa,color:#0d1117
 ```
 
 <br>
 
 ## `> cat /sys/bus/memory_map`
 
-```
-  CYCLONE V SOC ADDRESS SPACE
-  +=========================================+
-  |                                         |
-  |  0x0000_0000 +------------------+       |
-  |              | SDRAM (DDR3)     |       |
-  |              | 1 GB             |       |
-  |              | Linux + apps     |       |
-  |  0x3FFF_FFFF +------------------+       |
-  |                                         |
-  |  0xC000_0000 +------------------+       |
-  |              | FPGA Slaves      |       |
-  |              | HPS-to-FPGA      |       |
-  |              | bridge (960 MB)  |       |
-  |  0xFBFF_FFFF +------------------+       |
-  |                                         |
-  |  0xFF20_0000 +------------------+       |
-  |              | LW Bridge        |       |
-  |              |  0x00 STATUS     |       |
-  |              |  0x04 CAN_ID     |       |
-  |              |  0x10 TIMESTAMP  |       |
-  |              |  0x20 ACCEL_FILT |       |
-  |              |  0x30 FIR_COEFF  |       |
-  |  0xFF3F_FFFF +------------------+       |
-  |                                         |
-  |  0xFFD0_0000 +------------------+       |
-  |              | HPS Peripherals  |       |
-  |              | UART SPI I2C GPIO|       |
-  |  0xFFFF_FFFF +------------------+       |
-  +=========================================+
+```mermaid
+block-beta
+    columns 1
+    block:header["<b>Cyclone V SoC Address Space</b>"]
+        columns 2
+        A["0x0000_0000"] B["SDRAM (DDR3) &bull; 1 GB<br/>Linux kernel + userspace"]
+        C["0xC000_0000"] D["FPGA Slaves<br/>HPS-to-FPGA bridge &bull; 960 MB"]
+        E["0xFF20_0000"] F["Lightweight Bridge<br/>STATUS &bull; CAN_ID &bull; TIMESTAMP<br/>ACCEL_FILT &bull; FIR_COEFF"]
+        G["0xFFD0_0000"] H["HPS Peripherals<br/>UART &bull; SPI &bull; I2C &bull; GPIO"]
+    end
+
+    style header fill:#0d1117,stroke:#00d4aa,stroke-width:2px,color:#ffffff
+    style A fill:#00d4aa,stroke:#00d4aa,color:#0d1117
+    style B fill:#0a2e2a,stroke:#00d4aa,color:#ffffff
+    style C fill:#00b4d8,stroke:#00b4d8,color:#0d1117
+    style D fill:#0a1e2e,stroke:#00b4d8,color:#ffffff
+    style E fill:#00d4aa,stroke:#00d4aa,color:#0d1117
+    style F fill:#0a2e2a,stroke:#00d4aa,color:#ffffff
+    style G fill:#00b4d8,stroke:#00b4d8,color:#0d1117
+    style H fill:#0a1e2e,stroke:#00b4d8,color:#ffffff
 ```
 
 <br>
