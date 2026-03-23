@@ -1,374 +1,394 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:00d4aa,100:00b4d8&height=220&section=header&text=Sanjeev%20Kumar&fontSize=42&fontColor=ffffff&fontAlignY=35&desc=Embedded%20Systems%20Engineer%20%7C%20Digital%20Design%20%7C%20FPGA%20%7C%20Firmware&descSize=16&descColor=cccccc&descAlignY=55&animation=fadeIn" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:00d4aa,100:00b4d8&height=230&section=header&text=Sanjeev%20Kumar&fontSize=44&fontColor=ffffff&fontAlignY=32&desc=Embedded%20Systems%20Engineer%20%E2%80%A2%20FPGA%20%E2%80%A2%20RTL%20Design%20%E2%80%A2%20ARM%20Cortex%20%E2%80%A2%20Firmware&descSize=15&descColor=c9d1d9&descAlignY=52&animation=fadeIn" width="100%"/>
 </p>
 
 <p align="center">
-  <a href="mailto:sanjeevsaravanakumarx1@gmail.com"><img src="https://img.shields.io/badge/Email-0d1117?style=for-the-badge&logo=gmail&logoColor=00d4aa" alt="Email"/></a>
-  <a href="https://linkedin.com/in/sanjeev-kumarx2"><img src="https://img.shields.io/badge/LinkedIn-0d1117?style=for-the-badge&logo=linkedin&logoColor=00b4d8" alt="LinkedIn"/></a>
-  <a href="https://github.com/sanjusaravananx2-hub"><img src="https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=ffffff" alt="GitHub"/></a>
-  <img src="https://img.shields.io/badge/Location-Leeds,%20UK-0d1117?style=for-the-badge&logo=googlemaps&logoColor=00d4aa" alt="Location"/>
+  <a href="mailto:sanjeevsaravanakumarx1@gmail.com"><img src="https://img.shields.io/badge/Email-0d1117?style=for-the-badge&logo=gmail&logoColor=00d4aa" alt="Email"/></a>&nbsp;
+  <a href="https://linkedin.com/in/sanjeev-kumarx2"><img src="https://img.shields.io/badge/LinkedIn-0d1117?style=for-the-badge&logo=linkedin&logoColor=00b4d8" alt="LinkedIn"/></a>&nbsp;
+  <a href="https://github.com/sanjusaravananx2-hub"><img src="https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=ffffff" alt="GitHub"/></a>&nbsp;
+  <img src="https://img.shields.io/badge/Leeds,%20UK-0d1117?style=for-the-badge&logo=googlemaps&logoColor=00d4aa" alt="Location"/>
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=3000&pause=1000&color=00D4AA&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=80&lines=MSc+Embedded+Systems+Engineering+%40+University+of+Leeds;FPGA+%7C+RTL+Design+%7C+ARM+Cortex+%7C+Real-Time+Systems" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=3000&pause=1000&color=00D4AA&center=true&vCenter=true&repeat=true&width=620&height=30&lines=MSc+Embedded+Systems+Engineering+%40+Leeds;FPGA+%7C+Verilog+RTL+%7C+ARM+Cortex+%7C+Real-Time+Systems;900%2B+lines+of+synthesizable+Verilog+%E2%80%94+no+IP+cores;Hardware-software+co-design+on+heterogeneous+SoCs" alt="Typing SVG" />
 </p>
 
----
+<br>
 
 ## `> whoami`
 
 ```c
-typedef struct {
-    char *name;
-    char *degree;
-    char *university;
-    char *focus[];
-} engineer_t;
+#define ENGINEER "Sanjeev Kumar"
 
-engineer_t sanjeev = {
-    .name       = "Sanjeev Kumar",
-    .degree     = "MSc Embedded Systems Engineering (Predicted First Class)",
-    .university = "University of Leeds — Graduating Sep 2026",
+typedef struct {
+    const char *name;
+    const char *degree;
+    const char *university;
+    const char *graduation;
+    const char *focus[5];
+} embedded_engineer_t;
+
+static const embedded_engineer_t me = {
+    .name       = ENGINEER,
+    .degree     = "MSc Embedded Systems Engineering",
+    .university = "University of Leeds",
+    .graduation = "September 2026 (Predicted First Class)",
     .focus      = {
         "FPGA & Digital Design (Verilog HDL)",
-        "ARM Cortex-M/A Firmware Development",
-        "Hardware-Software Co-Design",
-        "Real-Time Signal Processing",
+        "ARM Cortex-M/A Firmware (bare-metal & RTOS)",
+        "Hardware-Software Co-Design on SoC",
+        "Real-Time Signal Processing & Edge AI",
         NULL
     }
 };
 ```
 
----
+<br>
 
 ## `> cat /proc/skills`
 
 <table>
-<tr>
-<td width="50%">
+<tr><td>
 
-### HDL & Digital Design
-![Verilog](https://img.shields.io/badge/Verilog_HDL-00d4aa?style=flat-square&logo=v&logoColor=0d1117)
-![SystemVerilog](https://img.shields.io/badge/SystemVerilog-00b4d8?style=flat-square&logo=v&logoColor=0d1117)
-![RTL Design](https://img.shields.io/badge/RTL_Design-0d1117?style=flat-square&logoColor=00d4aa)
-![FSM Design](https://img.shields.io/badge/FSM_Design-0d1117?style=flat-square)
-![Testbench](https://img.shields.io/badge/Simulation_%26_Testbench-0d1117?style=flat-square)
+**HDL & Digital Design**
 
-### FPGA & ASIC Flow
-![Quartus](https://img.shields.io/badge/Intel_Quartus_Prime-00b4d8?style=flat-square&logo=intel&logoColor=white)
-![SignalTap](https://img.shields.io/badge/SignalTap_II-0d1117?style=flat-square)
-![Timing Closure](https://img.shields.io/badge/Timing_Closure-0d1117?style=flat-square)
-![ModelSim](https://img.shields.io/badge/ModelSim-0d1117?style=flat-square)
+![Verilog](https://img.shields.io/badge/Verilog_HDL-00d4aa?style=for-the-badge&logoColor=0d1117)
+![SystemVerilog](https://img.shields.io/badge/SystemVerilog-00b4d8?style=for-the-badge&logoColor=0d1117)
+![RTL](https://img.shields.io/badge/RTL_Design-0d1117?style=for-the-badge)
+![FSM](https://img.shields.io/badge/FSM_Design-0d1117?style=for-the-badge)
 
-</td>
-<td width="50%">
+**FPGA & EDA Tools**
 
-### Languages & Frameworks
-![C](https://img.shields.io/badge/C-00d4aa?style=flat-square&logo=c&logoColor=0d1117)
-![C++](https://img.shields.io/badge/C++-00b4d8?style=flat-square&logo=cplusplus&logoColor=0d1117)
-![Python](https://img.shields.io/badge/Python-00d4aa?style=flat-square&logo=python&logoColor=0d1117)
-![MATLAB](https://img.shields.io/badge/MATLAB/Simulink-00b4d8?style=flat-square&logo=mathworks&logoColor=white)
+![Quartus](https://img.shields.io/badge/Intel_Quartus_Prime-00b4d8?style=for-the-badge&logo=intel&logoColor=white)
+![ModelSim](https://img.shields.io/badge/ModelSim-0d1117?style=for-the-badge)
+![SignalTap](https://img.shields.io/badge/SignalTap_II-0d1117?style=for-the-badge)
 
-### Embedded Platforms
-![STM32](https://img.shields.io/badge/STM32_(Cortex--M)-00d4aa?style=flat-square&logo=stmicroelectronics&logoColor=0d1117)
-![Cyclone V](https://img.shields.io/badge/Cyclone_V_SoC_(Cortex--A9)-00b4d8?style=flat-square&logo=intel&logoColor=white)
-![Pixhawk](https://img.shields.io/badge/Pixhawk_(PX4/NuttX)-0d1117?style=flat-square)
+</td><td>
 
-</td>
-</tr>
+**Languages**
+
+![C](https://img.shields.io/badge/C-00d4aa?style=for-the-badge&logo=c&logoColor=0d1117)
+![C++](https://img.shields.io/badge/C++-00b4d8?style=for-the-badge&logo=cplusplus&logoColor=0d1117)
+![Python](https://img.shields.io/badge/Python-00d4aa?style=for-the-badge&logo=python&logoColor=0d1117)
+![MATLAB](https://img.shields.io/badge/MATLAB-00b4d8?style=for-the-badge&logo=mathworks&logoColor=white)
+
+**Embedded Platforms**
+
+![STM32](https://img.shields.io/badge/STM32_Cortex--M-00d4aa?style=for-the-badge&logo=stmicroelectronics&logoColor=0d1117)
+![CycloneV](https://img.shields.io/badge/Cyclone_V_SoC-00b4d8?style=for-the-badge&logo=intel&logoColor=white)
+![Pixhawk](https://img.shields.io/badge/PX4_NuttX-0d1117?style=for-the-badge)
+
+</td></tr>
 </table>
 
-### Protocols & Interfaces
-<p>
-  <img src="https://img.shields.io/badge/AXI4--Lite-00d4aa?style=for-the-badge&logoColor=0d1117" alt="AXI4-Lite"/>
+<p align="center">
+  <img src="https://img.shields.io/badge/AXI4--Lite-00d4aa?style=for-the-badge" alt="AXI4-Lite"/>
   <img src="https://img.shields.io/badge/SPI-00b4d8?style=for-the-badge" alt="SPI"/>
   <img src="https://img.shields.io/badge/I2C-00d4aa?style=for-the-badge" alt="I2C"/>
   <img src="https://img.shields.io/badge/CAN_2.0B-00b4d8?style=for-the-badge" alt="CAN"/>
   <img src="https://img.shields.io/badge/UART-00d4aa?style=for-the-badge" alt="UART"/>
   <img src="https://img.shields.io/badge/PWM-00b4d8?style=for-the-badge" alt="PWM"/>
+  <img src="https://img.shields.io/badge/DMA-00d4aa?style=for-the-badge" alt="DMA"/>
+  <img src="https://img.shields.io/badge/USB_CDC-00b4d8?style=for-the-badge" alt="USB"/>
 </p>
 
----
+<br>
 
 ## `> ls ~/projects/`
 
-### FPGA-Based Servo Motor Control System
-> **Cyclone V DE1-SoC (5CSEMA5F31C6)** | Verilog HDL | Intel Quartus Prime 22.1
+---
+
+### <img src="https://img.shields.io/badge/01-00d4aa?style=for-the-badge" alt="01"/> FPGA Servo Motor Control System
+
+> `Cyclone V DE1-SoC` | `Verilog HDL` | `Quartus Prime 22.1` | `50 MHz`
 
 ```
-                          ┌─── Cyclone V DE1-SoC ────────────────────────────────┐
-                          │                                                       │
-    ┌──────────┐          │   FPGA Fabric (50 MHz)                                │
-    │          │          │   ┌─────────┐  ┌──────────┐  ┌───────────┐            │
-    │  Servo   │◄── PWM ──│───│ PWM Gen │◄─│Sweep FSM │  │ LCD       │            │
-    │  Motor   │          │   │ 20-bit  │  │ multi-   │  │ ILI9341   │            │
-    │          │          │   │ counter │  │ state    │  │ 16-bit    │            │
-    └──────────┘          │   └─────────┘  └──────────┘  └───────────┘            │
-                          │                                                       │
-                          │   ┌──────────────────────────────────────┐             │
-                          │   │ AXI4-Lite Slave                      │             │
-                          │   │ ┌──────┐┌──────┐┌──────┐┌──────┐   │             │
-                          │   │ │REG 0 ││REG 1 ││REG 2 ││REG 3 │   │             │
-                          │   │ │Period ││Duty  ││Status││IRQ   │   │             │
-                          │   │ └──┬───┘└──┬───┘└──┬───┘└──┬───┘   │             │
-                          │   │    └───────┴───────┴───────┘        │             │
-                          │   │         W1C IRQ → GIC SPI #72       │             │
-                          │   └──────────────┬───────────────────────┘             │
-                          │                  │ AXI4-Lite                           │
-                          │   ┌──────────────▼──────────────────────┐              │
-                          │   │  HPS ARM Cortex-A9                  │              │
-                          │   │  Runtime PWM control via /dev/mem   │              │
-                          │   └─────────────────────────────────────┘              │
-                          └───────────────────────────────────────────────────────┘
+              CYCLONE V DE1-SoC
+    ==========================================
+
+    +-------------+      +-------------+
+    |  PWM Gen    |<-----| Sweep FSM   |
+    |  20-bit ctr |      | multi-state |
+    |  50 Hz out  |      +-------------+
+    +------+------+
+           |               +-------------+
+           v               | LCD Driver  |
+      [Servo Motor]        | ILI9341     |
+                           | 240x320 px  |
+                           +-------------+
+
+    +------------------------------------+
+    |  AXI4-Lite Slave (4 registers)     |
+    |                                    |
+    |  REG0: Period   REG1: Duty Cycle   |
+    |  REG2: Status   REG3: IRQ (W1C)   |
+    |                                    |
+    |  IRQ Pending --> GIC SPI #72       |
+    +-----------------+------------------+
+                      | AXI4-Lite Bus
+                      v
+    +------------------------------------+
+    |  HPS ARM Cortex-A9                 |
+    |  Runtime control via /dev/mem      |
+    +------------------------------------+
+
+    ==========================================
 ```
 
 <details>
-<summary><b>RTL Module Breakdown</b></summary>
+<summary><b>RTL Module Breakdown (click to expand)</b></summary>
 
-| Module | Lines | Description |
-|:-------|:------|:------------|
-| `pwm_generator.v` | ~180 | 20-bit counter, configurable period/duty, 50 Hz output |
-| `sweep_fsm.v` | ~200 | Multi-state FSM driving sweep patterns across servo range |
-| `lcd_driver.v` | ~280 | 16-bit parallel interface for ILI9341 (240x320), init sequence FSM |
-| `axi4_lite_slave.v` | ~240 | 4-register map, write-strobe, read-back, W1C interrupt pending |
-
-**Total: ~900 lines of synthesizable Verilog — zero IP cores, zero soft processors.**
+| Module | Lines | Function |
+|:-------|------:|:---------|
+| `pwm_generator.v` | 180 | 20-bit counter, configurable period & duty, 50 Hz |
+| `sweep_fsm.v` | 200 | Multi-state FSM, sweep patterns across servo range |
+| `lcd_driver.v` | 280 | ILI9341 16-bit parallel, init FSM, real-time gauge |
+| `axi4_lite_slave.v` | 240 | 4-register map, write-strobe, W1C interrupt |
+| **Total** | **900** | **Zero IP cores. Zero soft processors.** |
 
 </details>
 
-- Full RTL flow: functional simulation → synthesis → P&R → timing closure at **50 MHz**
-- On-chip validation using **SignalTap II** logic analyser
-- AXI4-Lite slave with write-strobe handling, read-back, and IRQ-pending latch
+**Key achievements:**
+- Full RTL flow: simulation ➜ synthesis ➜ P&R ➜ timing closure at **50 MHz**
+- On-chip validation with **SignalTap II** logic analyser
+- AXI4-Lite slave with write-strobe, read-back, and W1C IRQ latch
 
 ---
 
-### CAN Bus Sensor Fusion Platform
-> **STM32F4 + Cyclone V SoC** | Verilog | CAN 2.0B | SPI | I2C | AXI4-Lite
+### <img src="https://img.shields.io/badge/02-00b4d8?style=for-the-badge" alt="02"/> CAN Bus Sensor Fusion Platform
+
+> `STM32F4` | `Cyclone V SoC` | `Verilog` | `CAN 2.0B` | `AXI4-Lite`
 
 ```
-  ┌─── STM32F4 Sensor Node ──────┐                    ┌─── Cyclone V DE1-SoC ─────────────────────┐
-  │                               │                    │                                            │
-  │  ┌────────┐    ┌──────────┐  │   CAN 2.0B         │  ┌─── FPGA Fabric ──────────────────────┐  │
-  │  │MPU6050 ├─┐  │          │  │   500 kbps          │  │                                      │  │
-  │  │6-axis  │ │  │ STM32F4  │  │  ┌──────────┐       │  │  ┌───────────┐    ┌──────────────┐   │  │
-  │  │IMU     │ ├──► Cortex-M4├──┼──►MCP2515   ├─CANH──┼──►  │SPI Master │───►│CAN Frame     │   │  │
-  │  └────────┘ │  │          │  │  │+TJA1050  ├─CANL──┼──►  │Controller │    │Parser        │   │  │
-  │  ┌────────┐ │  │ ISR-driven  │  └──────────┘       │  │  └───────────┘    └──────┬───────┘   │  │
-  │  │BMP280  ├─┘  │ bare-metal  │                     │  │                          │            │  │
-  │  │Temp/   │    │ firmware │  │                     │  │               ┌──────────▼─────────┐  │  │
-  │  │Pressure│    └──────────┘  │                     │  │               │ HW Timestamp       │  │  │
-  │  └────────┘                  │                     │  │               │ + 8-Tap FIR Filter  │  │  │
-  │                               │                    │  │               │ (pipelined,         │  │  │
-  │  I2C @ 400kHz                │                    │  │               │  configurable coeff) │  │  │
-  │  Timer ISR → 100Hz sampling  │                    │  │               └──────────┬───────────┘  │  │
-  └───────────────────────────────┘                    │  │                          │ AXI4-Lite    │  │
-                                                       │  └──────────────────────────┼──────────────┘  │
-                                                       │                             │                 │
-                                                       │  ┌──────────────────────────▼──────────────┐  │
-                                                       │  │  HPS ARM Cortex-A9 (Linux)               │  │
-                                                       │  │  ┌────────────────────────────────────┐  │  │
-                                                       │  │  │ can_monitor — real-time dashboard   │  │  │
-                                                       │  │  │ • mmap() FPGA regs @ 0xFF200000    │  │  │
-                                                       │  │  │ • CSV logging with HW timestamps   │  │  │
-                                                       │  │  │ • 7-seg display: frame stats       │  │  │
-                                                       │  │  └────────────────────────────────────┘  │  │
-                                                       │  └─────────────────────────────────────────┘  │
-                                                       │                                               │
-                                                       │  LEDs: CAN RX/TX/ERR    SW: filter config     │
-                                                       └───────────────────────────────────────────────┘
+  NODE 1: STM32F4                NODE 2: CYCLONE V SoC
+  ====================           ==============================
+
+  +--------+                     FPGA FABRIC
+  |MPU6050 |--+                  +---------------------------+
+  |6-axis  |  |  I2C             |                           |
+  +--------+  |  400kHz          |  SPI Master Controller    |
+              +-->+----------+   |      |                    |
+  +--------+     |  STM32   |   |      v                    |
+  |BMP280  |---->| Cortex-M4|   |  CAN Frame Parser         |
+  |Temp/Prs|     |          |   |      |                    |
+  +--------+     | ISR-based|   |      v                    |
+                 | bare-    |   |  8-Tap FIR Filter         |
+                 | metal    |   |  (pipelined, configurable)|
+                 +----+-----+   |      |                    |
+                      |         |  HW Timestamp Generator   |
+                      v         +------------+--------------+
+                 +----------+                |
+                 | MCP2515  |   AXI4-Lite    |
+                 | TJA1050  |   Bus Bridge   |
+                 +----+-----+                v
+                      |         +---------------------------+
+              CAN Bus |         | HPS ARM Cortex-A9 (Linux) |
+              500kbps |         |                           |
+              CANH ---+-------->| can_monitor application   |
+              CANL ---+-------->| mmap() @ 0xFF200000       |
+                                | CSV logging + 7-seg stats |
+                                +---------------------------+
 ```
 
 <details>
-<summary><b>FPGA Register Map (AXI4-Lite, base 0xFF200000)</b></summary>
+<summary><b>FPGA Register Map — base 0xFF200000 (click to expand)</b></summary>
 
-| Offset | Name | Access | Description |
-|:-------|:-----|:-------|:------------|
-| `0x00` | STATUS | R | `[0]` frame_valid, `[1]` error, `[15:8]` error_count |
-| `0x04` | CAN_ID | R | `[10:0]` Latest received CAN ID |
-| `0x08` | CAN_DATA_LO | R | CAN data bytes `[3:0]` |
-| `0x0C` | CAN_DATA_HI | R | CAN data bytes `[7:4]` |
-| `0x10` | TIMESTAMP | R | 32-bit hardware timestamp (1 us resolution) |
-| `0x14–0x1C` | ACCEL_RAW_X/Y/Z | R | Raw accelerometer (signed 16-bit) |
-| `0x20–0x28` | ACCEL_FILT_X/Y/Z | R | FIR-filtered accelerometer (signed 32-bit) |
-| `0x30` | FIR_COEFF | W | Write FIR coefficient (auto-increment, 8 taps) |
-| `0x40` | FRAME_COUNT | R | Total CAN frames received |
-| `0x44` | ERROR_COUNT | R | Total CAN errors detected |
+| Offset | Register | R/W | Description |
+|:-------|:---------|:---:|:------------|
+| `0x00` | STATUS | R | `[0]` frame_valid `[1]` error `[15:8]` err_count |
+| `0x04` | CAN_ID | R | `[10:0]` Latest CAN ID |
+| `0x08` | DATA_LO | R | CAN bytes `[3:0]` |
+| `0x0C` | DATA_HI | R | CAN bytes `[7:4]` |
+| `0x10` | TIMESTAMP | R | 32-bit HW timestamp (1 us) |
+| `0x14` | ACCEL_RAW | R | Raw accel X/Y/Z (int16) |
+| `0x20` | ACCEL_FILT | R | FIR-filtered accel (int32) |
+| `0x30` | FIR_COEFF | W | Coefficient write (auto-incr, 8 taps) |
+| `0x40` | FRAME_CNT | R | Total frames received |
+| `0x44` | ERROR_CNT | R | Total errors detected |
 
 </details>
 
 <details>
-<summary><b>CAN Message Protocol</b></summary>
+<summary><b>CAN Message Protocol (click to expand)</b></summary>
 
 | CAN ID | Payload | DLC | Rate |
-|:-------|:--------|:----|:-----|
-| `0x100` | Accel X, Y, Z (3 x int16) | 6 | 100 Hz |
-| `0x101` | Gyro X, Y, Z (3 x int16) | 6 | 100 Hz |
-| `0x102` | Temperature (int16) + Pressure (uint32) | 6 | 10 Hz |
-| `0x1FF` | Frame counter (uint16) + Uptime (uint32) | 6 | 1 Hz |
+|:-------|:--------|:---:|:-----|
+| `0x100` | Accel X/Y/Z (3 x int16) | 6 | 100 Hz |
+| `0x101` | Gyro X/Y/Z (3 x int16) | 6 | 100 Hz |
+| `0x102` | Temp (int16) + Press (uint32) | 6 | 10 Hz |
+| `0x1FF` | Frame count + Uptime | 6 | 1 Hz |
 
-All standard 11-bit CAN IDs @ 500 kbps.
+All standard 11-bit IDs @ 500 kbps
 
 </details>
 
-- Custom Verilog IP: SPI master, CAN frame parser, 8-tap pipelined FIR filter — **90% latency reduction** vs software
-- Heterogeneous SoC pipeline with HW timestamping — **35% throughput improvement**
-- Full 2-node CAN 2.0B network with real hardware-accelerated signal processing
+**Key achievements:**
+- Custom Verilog IP blocks — **90% signal-processing latency reduction** vs software
+- HW timestamping + FPGA-to-HPS pipeline — **35% data throughput improvement**
+- Full 2-node CAN 2.0B network with real hardware
 
 ---
 
-### AI-Driven Thermal Prediction for EV Inverter Power Modules
-> **MSc Dissertation — In Progress** | STM32 | Embedded C | Python | MATLAB/Simulink
+### <img src="https://img.shields.io/badge/03-00d4aa?style=for-the-badge" alt="03"/> AI Thermal Prediction — EV Inverter
+
+> `MSc Dissertation` | `STM32` | `MATLAB/Simulink` | `Edge AI`
 
 ```
-  ┌─── MATLAB/Simulink Modelling ──────────────────────────────────────────────┐
-  │                                                                             │
-  │   SPWM Inverter Model          Foster RC Thermal Network                   │
-  │   ┌───────────────┐            ┌───┐ ┌───┐ ┌───┐ ┌───┐                   │
-  │   │ 600V DC Bus   │   Ploss    │R1 │ │R2 │ │R3 │ │R4 │    Tj             │
-  │   │ 10 kHz SPWM   ├──────────► │C1 │►│C2 │►│C3 │►│C4 │──► (junction     │
-  │   │ 35A peak      │            │   │ │   │ │   │ │   │    temperature)   │
-  │   └───────────────┘            └───┘ └───┘ └───┘ └───┘                   │
-  │                                 4-layer thermal network                    │
-  │                                 Validated ±3–5°C vs datasheet              │
-  └─────────────────────────────────────────┬──────────────────────────────────┘
-                                            │ Training data
-                                            ▼
-  ┌─── Edge ML Deployment ─────────────────────────────────────────────────────┐
-  │                                                                             │
-  │   ┌──────────────┐    X-CUBE-AI     ┌──────────────────────────┐           │
-  │   │ Trained       │   / CMSIS-NN     │ STM32 Cortex-M           │           │
-  │   │ Regression    ├────────────────► │ ┌──────────────────────┐ │           │
-  │   │ Model         │   quantised      │ │ Lightweight inference │ │           │
-  │   └──────────────┘   int8/float16    │ │ < 1 ms per prediction │ │           │
-  │                                       │ │ 95%+ faster than sim  │ │           │
-  │                                       │ └──────────────────────┘ │           │
-  │                                       └──────────────────────────┘           │
-  └─────────────────────────────────────────────────────────────────────────────┘
+  MODELLING STAGE                  DEPLOYMENT STAGE
+  ===================              =======================
+
+  SPWM Inverter Model              Trained Model
+  +------------------+             +------------------+
+  | 600V DC bus      |             | Regression Model |
+  | 10 kHz switching |  Ploss      |                  |
+  | 35A peak current |---->+       +--------+---------+
+  +------------------+     |                |
+                           v                | X-CUBE-AI
+  Foster RC Network        |                | CMSIS-NN
+  +---+  +---+  +---+  +---+               | quantised
+  |R1 |->|R2 |->|R3 |->|R4 |               v
+  |C1 |  |C2 |  |C3 |  |C4 |      +------------------+
+  +---+  +---+  +---+  +---+      | STM32 Cortex-M   |
+       |                           |                  |
+       +--> Tj (junction temp)     | < 1ms inference  |
+            +/- 3-5C accuracy      | 95%+ faster      |
+                                   +------------------+
 ```
 
-- Coupled electrothermal IGBT model (10 kHz SPWM, 600V DC, 35A peak) with 4-layer Foster RC network
-- Validated within **±3–5°C** of datasheet references
-- Deploying lightweight ML model on STM32 via X-CUBE-AI/CMSIS-NN — **95%+ latency reduction**
+**Key achievements:**
+- 4-layer Foster RC thermal network validated **±3–5°C** vs datasheet
+- Edge deployment on STM32 via X-CUBE-AI — **95%+ inference latency reduction**
+- Bridging physics-based modelling with embedded ML
 
 ---
 
-### STM32 USB Signal Analyser
-> **STM32 + USB** | Embedded C | Real-Time Capture
+### <img src="https://img.shields.io/badge/04-00b4d8?style=for-the-badge" alt="04"/> STM32 USB Signal Analyser
+
+> `STM32F411` | `Bare-metal C` | `USB CDC` | `DMA` | `Python Host`
 
 ```
-    Analog/Digital         ┌─── STM32 MCU ───────────────────┐        Host PC
-    Signal Input           │                                  │
-   ─────────────►  GPIO/   │  ┌──────────┐   ┌────────────┐  │  USB   ┌──────────┐
-                   ADC ────┼──► Capture   ├──►│ Ring Buffer │──┼───────►│ Analysis │
-                           │  │ Engine    │   │ + DMA      │  │  CDC   │ Software │
-                           │  │ (ISR/DMA) │   └────────────┘  │        └──────────┘
-                           │  └──────────┘                    │
-                           │  Timer-triggered sampling        │
-                           │  Configurable sample rate        │
-                           └──────────────────────────────────┘
+  Signal In        STM32F411 Black Pill         Host PC
+  =========        ========================     ============
+
+                   +----------------------+
+  Analog/   ADC    | Capture Engine       |     +---------+
+  Digital --+----->| (Timer-triggered     | USB | Python  |
+  Signal    |      |  ISR + DMA)          | CDC | FFT     |
+            |      |         |            |---->| Analysis|
+            |      |         v            |     | Tool    |
+            |      | Ring Buffer          |     +---------+
+            |      | (zero-copy, double-  |
+            |      |  buffered DMA xfer)  |
+            |      +----------------------+
+            |
+            |      Configurable sample rate
+            +----> up to 2.4 MSPS (12-bit)
 ```
 
-- Real-time signal capture using DMA + timer-triggered ADC sampling
-- USB CDC interface for high-throughput data transfer to host
-- Ring buffer architecture for zero-copy continuous acquisition
+**Key achievements:**
+- Real-time oscilloscope + FFT analyser on STM32
+- DMA double-buffering for zero-copy continuous acquisition
+- USB CDC streaming to Python host application
 
----
+<br>
 
 ## `> cat /proc/mcu/pinout`
 
 ```
-            ╔═══════════════════════════════════════════════════════════╗
-            ║              STM32F4 — My Go-To MCU                      ║
-            ╠═══════════════════════════════════════════════════════════╣
-            ║                                                           ║
-            ║   PA0  ○──── ADC_IN0 (signal capture)                    ║
-            ║   PA5  ○──── SPI1_SCK  ──► MCP2515 (CAN controller)     ║
-            ║   PA6  ○──── SPI1_MISO ◄── MCP2515                      ║
-            ║   PA7  ○──── SPI1_MOSI ──► MCP2515                      ║
-            ║   PA9  ○──── USART1_TX ──► Debug console                 ║
-            ║   PA10 ○──── USART1_RX ◄── Debug console                 ║
-            ║   PA11 ○──── USB_DM    ──► Host PC (CDC)                 ║
-            ║   PA12 ○──── USB_DP    ──► Host PC (CDC)                 ║
-            ║   PB4  ○──── SPI1_CS   ──► MCP2515 (active low)         ║
-            ║   PB6  ○──── I2C1_SCL  ──► MPU6050 / BMP280             ║
-            ║   PB7  ○──── I2C1_SDA  ◄─► MPU6050 / BMP280             ║
-            ║   PB8  ○──── TIM4_CH3  ──► PWM output                    ║
-            ║   PC13 ○──── GPIO_INT  ◄── MCP2515 /INT (CAN RX ready)  ║
-            ║                                                           ║
-            ║   Cortex-M4 @ 84/100 MHz  │  FPU  │  128–512 KB Flash   ║
-            ║   NVIC: nested vectored interrupts for real-time tasks    ║
-            ╚═══════════════════════════════════════════════════════════╝
+      STM32F4 PIN CONFIGURATION (across all projects)
+     +================================================+
+     |                                                  |
+     |  PA0  o---- ADC_IN0 -----> Signal Capture        |
+     |  PA5  o---- SPI1_SCK ----> MCP2515 CAN           |
+     |  PA6  o---- SPI1_MISO <--- MCP2515 CAN           |
+     |  PA7  o---- SPI1_MOSI ---> MCP2515 CAN           |
+     |  PA9  o---- USART1_TX ---> Debug Console          |
+     |  PA10 o---- USART1_RX <--- Debug Console          |
+     |  PA11 o---- USB_DM ------> Host PC                |
+     |  PA12 o---- USB_DP ------> Host PC                |
+     |  PB4  o---- SPI1_CS -----> MCP2515 (/CS)          |
+     |  PB6  o---- I2C1_SCL ----> MPU6050 + BMP280       |
+     |  PB7  o---- I2C1_SDA <---> MPU6050 + BMP280       |
+     |  PB8  o---- TIM4_CH3 ----> PWM Output             |
+     |  PC13 o---- EXTI --------< MCP2515 /INT           |
+     |                                                  |
+     |  [Cortex-M4F @ 100MHz] [FPU] [512KB Flash]      |
+     |  [NVIC] [DMA2] [12-bit ADC @ 2.4MSPS]           |
+     +================================================+
 ```
 
----
+<br>
 
 ## `> cat /sys/bus/memory_map`
 
 ```
-  ┌────────────────────────────────────────────────────────────────────┐
-  │                 Cyclone V SoC Memory Map                           │
-  │                                                                    │
-  │  0x0000_0000 ┌──────────────────────┐                             │
-  │              │  SDRAM (HPS DDR3)     │  1 GB                      │
-  │              │  Linux kernel + apps  │                             │
-  │  0x3FFF_FFFF └──────────────────────┘                             │
-  │                                                                    │
-  │  0xC000_0000 ┌──────────────────────┐                             │
-  │              │  FPGA Slaves          │  Lightweight HPS-to-FPGA   │
-  │              │  (directly mapped)    │                             │
-  │  0xFBFF_FFFF └──────────────────────┘                             │
-  │                                                                    │
-  │  0xFF20_0000 ┌──────────────────────┐                             │
-  │              │  Lightweight Bridge   │  Custom AXI4-Lite slaves   │
-  │              │  ├─ 0x00: STATUS      │  CAN sensor fusion regs    │
-  │              │  ├─ 0x04: CAN_ID      │                             │
-  │              │  ├─ 0x08: DATA_LO     │                             │
-  │              │  ├─ 0x20: ACCEL_FILT  │                             │
-  │              │  └─ 0x30: FIR_COEFF   │                             │
-  │  0xFF3F_FFFF └──────────────────────┘                             │
-  │                                                                    │
-  │  0xFFD0_0000 ┌──────────────────────┐                             │
-  │              │  HPS Peripherals      │  UART, SPI, I2C, GPIO      │
-  │  0xFFFF_FFFF └──────────────────────┘                             │
-  └────────────────────────────────────────────────────────────────────┘
+    CYCLONE V SOC MEMORY MAP
+    ========================================
+
+    0x0000_0000  +--------------------+
+                 | SDRAM (DDR3)       |
+                 | 1 GB               |
+                 | Linux + userspace  |
+    0x3FFF_FFFF  +--------------------+
+
+    0xC000_0000  +--------------------+
+                 | FPGA Slaves        |
+                 | (HPS-to-FPGA       |
+                 |  bridge, 960 MB)   |
+    0xFBFF_FFFF  +--------------------+
+
+    0xFF20_0000  +--------------------+
+                 | Lightweight Bridge |
+                 | (custom registers) |
+                 |  0x00 STATUS       |
+                 |  0x04 CAN_ID       |
+                 |  0x10 TIMESTAMP    |
+                 |  0x20 ACCEL_FILT   |
+                 |  0x30 FIR_COEFF    |
+    0xFF3F_FFFF  +--------------------+
+
+    0xFFD0_0000  +--------------------+
+                 | HPS Peripherals    |
+                 | UART SPI I2C GPIO  |
+    0xFFFF_FFFF  +--------------------+
 ```
 
----
+<br>
 
 ## `> cat /etc/experience`
 
 | Role | Organisation | Period |
 |:-----|:------------|:-------|
-| **Avionics & Propulsion Engineer** | Gryphon Arrows (IMechE UAS Challenge) | Oct 2025 — Present |
-| **Vehicle Dynamics Engineer** | Leeds Gryphon Racing (Formula Student EV) | Oct 2025 — Present |
-| **Embedded Systems Engineer** (Industrial Training) | InTrainz, India | Feb 2024 — Sep 2024 |
+| **Avionics & Propulsion Engineer** | Gryphon Arrows — IMechE UAS Challenge | Oct 2025 — Present |
+| **Vehicle Dynamics Engineer** | Leeds Gryphon Racing — Formula Student EV | Oct 2025 — Present |
+| **Embedded Systems Engineer** (Industrial Placement) | InTrainz, India | Feb 2024 — Sep 2024 |
 
----
+<br>
 
 ## `> cat /etc/education`
 
 | Degree | Institution | Period |
 |:-------|:-----------|:-------|
-| **MSc Embedded Systems Engineering** (Predicted First Class) | University of Leeds | 2025 — 2026 |
-| **B.Eng Electronics & Communication** (First Class with Distinction) | Sathyabama Institute, Chennai | 2021 — 2025 |
+| **MSc Embedded Systems Engineering** (Predicted 1st) | University of Leeds | 2025 — 2026 |
+| **B.Eng Electronics & Communication** (1st with Distinction) | Sathyabama Institute, Chennai | 2021 — 2025 |
 
----
+<br>
 
-## `> cat /etc/certifications`
+## `> cat /etc/certs`
 
 <p>
-  <img src="https://img.shields.io/badge/UK_Amateur_Radio_Foundation_Licence_(M7KVD)-00d4aa?style=flat-square&logo=radio&logoColor=0d1117" alt="Radio"/>
-  <img src="https://img.shields.io/badge/GE_Aerospace_Electrical_Engineering_Sim-00b4d8?style=flat-square&logo=ge&logoColor=white" alt="GE"/>
-  <img src="https://img.shields.io/badge/Power_Electronics_(Univ._Colorado_Boulder)-00d4aa?style=flat-square&logo=coursera&logoColor=0d1117" alt="Power Electronics"/>
-  <img src="https://img.shields.io/badge/MATLAB_Onramp_(MathWorks)-00b4d8?style=flat-square&logo=mathworks&logoColor=white" alt="MATLAB"/>
+  <img src="https://img.shields.io/badge/UK_Amateur_Radio_M7KVD-00d4aa?style=for-the-badge&logo=radio&logoColor=0d1117" alt="Radio"/>
+  <img src="https://img.shields.io/badge/GE_Aerospace_EE_Sim-00b4d8?style=for-the-badge&logo=ge&logoColor=white" alt="GE"/>
+  <img src="https://img.shields.io/badge/Power_Electronics-00d4aa?style=for-the-badge&logo=coursera&logoColor=0d1117" alt="Power"/>
+  <img src="https://img.shields.io/badge/MATLAB_Onramp-00b4d8?style=for-the-badge&logo=mathworks&logoColor=white" alt="MATLAB"/>
 </p>
 
----
+<br>
 
 ## `> top -b | head`
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=sanjusaravananx2-hub&show_icons=true&theme=react&bg_color=0d1117&title_color=00d4aa&icon_color=00b4d8&text_color=c9d1d9&border_color=30363d&hide_border=false" height="180"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=sanjusaravananx2-hub&show_icons=true&theme=react&bg_color=0d1117&title_color=00d4aa&icon_color=00b4d8&text_color=c9d1d9&border_color=30363d" height="180"/>
   <img src="https://github-readme-streak-stats.herokuapp.com?user=sanjusaravananx2-hub&theme=react&background=0d1117&ring=00d4aa&fire=00d4aa&currStreakLabel=00d4aa&sideLabels=c9d1d9&dates=8b949e&border=30363d" height="180"/>
 </p>
 
@@ -376,7 +396,7 @@ All standard 11-bit CAN IDs @ 500 kbps.
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sanjusaravananx2-hub&layout=compact&theme=react&bg_color=0d1117&title_color=00d4aa&text_color=c9d1d9&border_color=30363d&langs_count=8" height="160"/>
 </p>
 
----
+<br>
 
 ## `> tail -f /var/log/activity.log`
 
@@ -391,7 +411,7 @@ All standard 11-bit CAN IDs @ 500 kbps.
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=sanjusaravananx2-hub&style=for-the-badge&color=00d4aa&label=PROFILE+VIEWS" alt="Profile views"/>
+  <img src="https://komarev.com/ghpvc/?username=sanjusaravananx2-hub&style=for-the-badge&color=00d4aa&label=PROFILE+VIEWS" alt="views"/>
 </p>
 
 <p align="center">
