@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=3000&pause=1000&color=00D4AA&center=true&vCenter=true&repeat=true&width=620&height=30&lines=MSc+Embedded+Systems+Engineering+%40+Leeds;FPGA+%7C+Verilog+RTL+%7C+ARM+Cortex+%7C+Real-Time+Systems;900%2B+lines+of+synthesizable+Verilog+%E2%80%94+no+IP+cores;Hardware-software+co-design+on+heterogeneous+SoCs" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=3000&pause=1000&color=00D4AA&center=true&vCenter=true&repeat=true&width=750&height=30&lines=MSc+Embedded+Systems+Engineering+%40+University+of+Leeds;FPGA+%7C+Verilog+RTL+%7C+ARM+Cortex+%7C+Real-Time+Systems;900%2B+lines+of+synthesizable+Verilog+%E2%80%94+zero+IP+cores;Hardware-software+co-design+on+heterogeneous+SoCs" alt="Typing SVG" />
 </p>
 
 <br>
@@ -96,102 +96,106 @@ static const embedded_engineer_t me = {
 
 ## `> ls ~/projects/`
 
----
+<!-- ==================== PROJECT 1 ==================== -->
 
-### <img src="https://img.shields.io/badge/01-00d4aa?style=for-the-badge" alt="01"/> FPGA Servo Motor Control System
+<table>
+<tr><td>
 
-> `Cyclone V DE1-SoC` | `Verilog HDL` | `Quartus Prime 22.1` | `50 MHz`
+### <img src="https://img.shields.io/badge/01-00d4aa?style=for-the-badge" alt="01"/> &nbsp; FPGA Servo Motor Control System
+
+<img src="https://img.shields.io/badge/Cyclone_V_DE1--SoC-00d4aa?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Verilog_HDL-00d4aa?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Quartus_Prime_22.1-00d4aa?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/50_MHz-00d4aa?style=flat-square" alt=""/>
 
 ```
-              CYCLONE V DE1-SoC
-    ==========================================
-
-    +-------------+      +-------------+
-    |  PWM Gen    |<-----| Sweep FSM   |
-    |  20-bit ctr |      | multi-state |
-    |  50 Hz out  |      +-------------+
-    +------+------+
-           |               +-------------+
-           v               | LCD Driver  |
-      [Servo Motor]        | ILI9341     |
-                           | 240x320 px  |
-                           +-------------+
-
-    +------------------------------------+
-    |  AXI4-Lite Slave (4 registers)     |
-    |                                    |
-    |  REG0: Period   REG1: Duty Cycle   |
-    |  REG2: Status   REG3: IRQ (W1C)   |
-    |                                    |
-    |  IRQ Pending --> GIC SPI #72       |
-    +-----------------+------------------+
-                      | AXI4-Lite Bus
-                      v
-    +------------------------------------+
-    |  HPS ARM Cortex-A9                 |
-    |  Runtime control via /dev/mem      |
-    +------------------------------------+
-
-    ==========================================
+         +-----------+    +-----------+
+         | Sweep FSM |    |LCD Driver |
+         | multi-    |--->|ILI9341    |
+         | state     |    |240x320 px |
+         +-----+-----+    +-----------+
+               |
+               v
+         +-----------+
+         | PWM Gen   |
+         | 20-bit    |-----> [SERVO]
+         | 50 Hz     |
+         +-----------+
+               ^
+               | config
+         +-----------+
+         |AXI4-Lite  |
+         |Slave      |
+         |4 regs,W1C |
+         |IRQ->GIC#72|
+         +-----+-----+
+               |
+         +-----v-----+
+         |HPS        |
+         |Cortex-A9  |
+         |/dev/mem   |
+         +-----------+
 ```
+
+**~900 lines of synthesizable Verilog. Zero IP cores. Zero soft processors.**
+
+- Full RTL flow: simulation ➜ synthesis ➜ P&R ➜ timing closure at **50 MHz**
+- On-chip debug with **SignalTap II** logic analyser
+- W1C interrupt latch connected to GIC SPI #72 for HPS notification
 
 <details>
-<summary><b>RTL Module Breakdown (click to expand)</b></summary>
+<summary>RTL Module Breakdown</summary>
 
 | Module | Lines | Function |
 |:-------|------:|:---------|
-| `pwm_generator.v` | 180 | 20-bit counter, configurable period & duty, 50 Hz |
-| `sweep_fsm.v` | 200 | Multi-state FSM, sweep patterns across servo range |
-| `lcd_driver.v` | 280 | ILI9341 16-bit parallel, init FSM, real-time gauge |
-| `axi4_lite_slave.v` | 240 | 4-register map, write-strobe, W1C interrupt |
-| **Total** | **900** | **Zero IP cores. Zero soft processors.** |
+| `pwm_generator.v` | 180 | 20-bit counter, configurable period & duty |
+| `sweep_fsm.v` | 200 | Multi-state FSM, sweep patterns |
+| `lcd_driver.v` | 280 | ILI9341 16-bit parallel, init FSM, gauge |
+| `axi4_lite_slave.v` | 240 | 4-register map, write-strobe, W1C IRQ |
 
 </details>
 
-**Key achievements:**
-- Full RTL flow: simulation ➜ synthesis ➜ P&R ➜ timing closure at **50 MHz**
-- On-chip validation with **SignalTap II** logic analyser
-- AXI4-Lite slave with write-strobe, read-back, and W1C IRQ latch
+</td></tr>
+</table>
 
----
+<!-- ==================== PROJECT 2 ==================== -->
 
-### <img src="https://img.shields.io/badge/02-00b4d8?style=for-the-badge" alt="02"/> CAN Bus Sensor Fusion Platform
+<table>
+<tr><td>
 
-> `STM32F4` | `Cyclone V SoC` | `Verilog` | `CAN 2.0B` | `AXI4-Lite`
+### <img src="https://img.shields.io/badge/02-00b4d8?style=for-the-badge" alt="02"/> &nbsp; CAN Bus Sensor Fusion Platform
+
+<img src="https://img.shields.io/badge/STM32F4-00b4d8?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Cyclone_V_SoC-00b4d8?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Verilog-00b4d8?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/CAN_2.0B-00b4d8?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/AXI4--Lite-00b4d8?style=flat-square" alt=""/>
 
 ```
-  NODE 1: STM32F4                NODE 2: CYCLONE V SoC
-  ====================           ==============================
+  SENSOR NODE               BUS        PROCESSING NODE
+  ============            =======      ===================
 
-  +--------+                     FPGA FABRIC
-  |MPU6050 |--+                  +---------------------------+
-  |6-axis  |  |  I2C             |                           |
-  +--------+  |  400kHz          |  SPI Master Controller    |
-              +-->+----------+   |      |                    |
-  +--------+     |  STM32   |   |      v                    |
-  |BMP280  |---->| Cortex-M4|   |  CAN Frame Parser         |
-  |Temp/Prs|     |          |   |      |                    |
-  +--------+     | ISR-based|   |      v                    |
-                 | bare-    |   |  8-Tap FIR Filter         |
-                 | metal    |   |  (pipelined, configurable)|
-                 +----+-----+   |      |                    |
-                      |         |  HW Timestamp Generator   |
-                      v         +------------+--------------+
-                 +----------+                |
-                 | MCP2515  |   AXI4-Lite    |
-                 | TJA1050  |   Bus Bridge   |
-                 +----+-----+                v
-                      |         +---------------------------+
-              CAN Bus |         | HPS ARM Cortex-A9 (Linux) |
-              500kbps |         |                           |
-              CANH ---+-------->| can_monitor application   |
-              CANL ---+-------->| mmap() @ 0xFF200000       |
-                                | CSV logging + 7-seg stats |
-                                +---------------------------+
+  +--------+                            FPGA FABRIC
+  |MPU6050 |-+  I2C                    +--------------+
+  +--------+ +->+--------+            |SPI Master    |
+  +--------+ |  | STM32  |  CAN 2.0B  |   v          |
+  |BMP280  |-+  |Cortex- |  500kbps   |CAN Parser    |
+  +--------+    |M4      |----------->|   v          |
+                |ISR-    |  CANH/CANL  |FIR Filter   |
+                |driven  |            |8-tap,pipelined|
+                +---+----+            |   v          |
+                    |                  |HW Timestamp  |
+                    v                  +------+-------+
+               +--------+                    |
+               |MCP2515 |            AXI4-Lite Bus
+               |TJA1050 |                    |
+               +--------+             +------v-------+
+                                      |HPS Cortex-A9 |
+                                      |Linux         |
+                                      |mmap@FF200000 |
+                                      |CSV + 7-seg   |
+                                      +--------------+
 ```
+
+- Custom Verilog IP — **90% latency reduction** vs software implementation
+- HW timestamping + FPGA pipeline — **35% data throughput improvement**
+- Real 2-node CAN 2.0B network at 500 kbps with hardware filtering
 
 <details>
-<summary><b>FPGA Register Map — base 0xFF200000 (click to expand)</b></summary>
+<summary>FPGA Register Map (base 0xFF200000)</summary>
 
 | Offset | Register | R/W | Description |
 |:-------|:---------|:---:|:------------|
@@ -201,120 +205,127 @@ static const embedded_engineer_t me = {
 | `0x0C` | DATA_HI | R | CAN bytes `[7:4]` |
 | `0x10` | TIMESTAMP | R | 32-bit HW timestamp (1 us) |
 | `0x14` | ACCEL_RAW | R | Raw accel X/Y/Z (int16) |
-| `0x20` | ACCEL_FILT | R | FIR-filtered accel (int32) |
-| `0x30` | FIR_COEFF | W | Coefficient write (auto-incr, 8 taps) |
+| `0x20` | ACCEL_FILT | R | FIR-filtered (int32) |
+| `0x30` | FIR_COEFF | W | Coefficient write (8 taps) |
 | `0x40` | FRAME_CNT | R | Total frames received |
 | `0x44` | ERROR_CNT | R | Total errors detected |
 
 </details>
 
 <details>
-<summary><b>CAN Message Protocol (click to expand)</b></summary>
+<summary>CAN Message Protocol</summary>
 
 | CAN ID | Payload | DLC | Rate |
 |:-------|:--------|:---:|:-----|
 | `0x100` | Accel X/Y/Z (3 x int16) | 6 | 100 Hz |
 | `0x101` | Gyro X/Y/Z (3 x int16) | 6 | 100 Hz |
-| `0x102` | Temp (int16) + Press (uint32) | 6 | 10 Hz |
+| `0x102` | Temp + Pressure | 6 | 10 Hz |
 | `0x1FF` | Frame count + Uptime | 6 | 1 Hz |
 
 All standard 11-bit IDs @ 500 kbps
 
 </details>
 
-**Key achievements:**
-- Custom Verilog IP blocks — **90% signal-processing latency reduction** vs software
-- HW timestamping + FPGA-to-HPS pipeline — **35% data throughput improvement**
-- Full 2-node CAN 2.0B network with real hardware
+</td></tr>
+</table>
 
----
+<!-- ==================== PROJECT 3 ==================== -->
 
-### <img src="https://img.shields.io/badge/03-00d4aa?style=for-the-badge" alt="03"/> AI Thermal Prediction — EV Inverter
+<table>
+<tr><td>
 
-> `MSc Dissertation` | `STM32` | `MATLAB/Simulink` | `Edge AI`
+### <img src="https://img.shields.io/badge/03-00d4aa?style=for-the-badge" alt="03"/> &nbsp; AI Thermal Prediction — EV Inverter
 
-```
-  MODELLING STAGE                  DEPLOYMENT STAGE
-  ===================              =======================
-
-  SPWM Inverter Model              Trained Model
-  +------------------+             +------------------+
-  | 600V DC bus      |             | Regression Model |
-  | 10 kHz switching |  Ploss      |                  |
-  | 35A peak current |---->+       +--------+---------+
-  +------------------+     |                |
-                           v                | X-CUBE-AI
-  Foster RC Network        |                | CMSIS-NN
-  +---+  +---+  +---+  +---+               | quantised
-  |R1 |->|R2 |->|R3 |->|R4 |               v
-  |C1 |  |C2 |  |C3 |  |C4 |      +------------------+
-  +---+  +---+  +---+  +---+      | STM32 Cortex-M   |
-       |                           |                  |
-       +--> Tj (junction temp)     | < 1ms inference  |
-            +/- 3-5C accuracy      | 95%+ faster      |
-                                   +------------------+
-```
-
-**Key achievements:**
-- 4-layer Foster RC thermal network validated **±3–5°C** vs datasheet
-- Edge deployment on STM32 via X-CUBE-AI — **95%+ inference latency reduction**
-- Bridging physics-based modelling with embedded ML
-
----
-
-### <img src="https://img.shields.io/badge/04-00b4d8?style=for-the-badge" alt="04"/> STM32 USB Signal Analyser
-
-> `STM32F411` | `Bare-metal C` | `USB CDC` | `DMA` | `Python Host`
+<img src="https://img.shields.io/badge/MSc_Dissertation-00d4aa?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/STM32-00d4aa?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/MATLAB%2FSimulink-00d4aa?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Edge_AI-00d4aa?style=flat-square" alt=""/>
 
 ```
-  Signal In        STM32F411 Black Pill         Host PC
-  =========        ========================     ============
+  MODELLING                    DEPLOYMENT
+  ==========                   ===========
 
-                   +----------------------+
-  Analog/   ADC    | Capture Engine       |     +---------+
-  Digital --+----->| (Timer-triggered     | USB | Python  |
-  Signal    |      |  ISR + DMA)          | CDC | FFT     |
-            |      |         |            |---->| Analysis|
-            |      |         v            |     | Tool    |
-            |      | Ring Buffer          |     +---------+
-            |      | (zero-copy, double-  |
-            |      |  buffered DMA xfer)  |
-            |      +----------------------+
-            |
-            |      Configurable sample rate
-            +----> up to 2.4 MSPS (12-bit)
+  +----------------+           +----------------+
+  | SPWM Inverter  |           | Trained Model  |
+  | 600V, 10kHz    |  Ploss    |    |           |
+  | 35A peak       |---->+     |    | X-CUBE-AI |
+  +----------------+     |     |    | CMSIS-NN  |
+                         v     |    v           |
+  +----+ +----+ +----+ +----+ | +------------+ |
+  | R1 | | R2 | | R3 | | R4 | | |STM32       | |
+  | C1 | | C2 | | C3 | | C4 | | |Cortex-M    | |
+  +--+-+ +--+-+ +--+-+ +--+-+ | |<1ms infer. | |
+     |      |      |      |   | |95%+ faster | |
+     +------+------+------+   | +------------+ |
+            |                  +----------------+
+            v
+     Tj (junction temp)
+     +/- 3-5C accuracy
 ```
 
-**Key achievements:**
-- Real-time oscilloscope + FFT analyser on STM32
-- DMA double-buffering for zero-copy continuous acquisition
-- USB CDC streaming to Python host application
+- 4-layer Foster RC thermal network — validated **±3–5°C** vs datasheet
+- Edge deployment via X-CUBE-AI/CMSIS-NN — **95%+ inference latency reduction**
+- Bridging physics-based modelling with on-chip machine learning
+
+</td></tr>
+</table>
+
+<!-- ==================== PROJECT 4 ==================== -->
+
+<table>
+<tr><td>
+
+### <img src="https://img.shields.io/badge/04-00b4d8?style=for-the-badge" alt="04"/> &nbsp; STM32 USB Signal Analyser
+
+<img src="https://img.shields.io/badge/STM32F411-00b4d8?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Bare--metal_C-00b4d8?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/USB_CDC-00b4d8?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/DMA-00b4d8?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Python_Host-00b4d8?style=flat-square" alt=""/>
+
+```
+  INPUT            STM32F411             HOST
+  =====            =========             ====
+
+               +---------------+
+  Analog/      | Timer-trigger |     +---------+
+  Digital ---->| ADC + DMA     | USB | Python  |
+  Signal       |     |         | CDC | FFT     |
+               |     v         |---->| Scope   |
+               | Ring Buffer   |     | Tool    |
+               | double-buffer |     +---------+
+               | zero-copy     |
+               +---------------+
+
+               12-bit ADC
+               up to 2.4 MSPS
+```
+
+- Real-time oscilloscope + FFT analyser on bare-metal STM32
+- DMA double-buffering for **zero-copy** continuous acquisition
+- USB CDC high-throughput streaming to Python host
+
+</td></tr>
+</table>
 
 <br>
 
 ## `> cat /proc/mcu/pinout`
 
 ```
-      STM32F4 PIN CONFIGURATION (across all projects)
-     +================================================+
-     |                                                  |
-     |  PA0  o---- ADC_IN0 -----> Signal Capture        |
-     |  PA5  o---- SPI1_SCK ----> MCP2515 CAN           |
-     |  PA6  o---- SPI1_MISO <--- MCP2515 CAN           |
-     |  PA7  o---- SPI1_MOSI ---> MCP2515 CAN           |
-     |  PA9  o---- USART1_TX ---> Debug Console          |
-     |  PA10 o---- USART1_RX <--- Debug Console          |
-     |  PA11 o---- USB_DM ------> Host PC                |
-     |  PA12 o---- USB_DP ------> Host PC                |
-     |  PB4  o---- SPI1_CS -----> MCP2515 (/CS)          |
-     |  PB6  o---- I2C1_SCL ----> MPU6050 + BMP280       |
-     |  PB7  o---- I2C1_SDA <---> MPU6050 + BMP280       |
-     |  PB8  o---- TIM4_CH3 ----> PWM Output             |
-     |  PC13 o---- EXTI --------< MCP2515 /INT           |
-     |                                                  |
-     |  [Cortex-M4F @ 100MHz] [FPU] [512KB Flash]      |
-     |  [NVIC] [DMA2] [12-bit ADC @ 2.4MSPS]           |
-     +================================================+
+  STM32F4 PIN MAP (across all projects)
+  +=============================================+
+  |                                             |
+  |  PA0  o--- ADC_IN0 ----> Signal Capture     |
+  |  PA5  o--- SPI1_SCK ---> MCP2515 CAN        |
+  |  PA6  o--- SPI1_MISO <-- MCP2515 CAN        |
+  |  PA7  o--- SPI1_MOSI --> MCP2515 CAN        |
+  |  PA9  o--- USART1_TX --> Debug Console       |
+  |  PA10 o--- USART1_RX <-- Debug Console       |
+  |  PA11 o--- USB_DM -----> Host PC             |
+  |  PA12 o--- USB_DP -----> Host PC             |
+  |  PB4  o--- SPI1_CS ----> MCP2515 (/CS)       |
+  |  PB6  o--- I2C1_SCL ---> MPU6050 + BMP280    |
+  |  PB7  o--- I2C1_SDA <--> MPU6050 + BMP280    |
+  |  PB8  o--- TIM4_CH3 ---> PWM Output          |
+  |  PC13 o--- EXTI ------<- MCP2515 /INT         |
+  |                                             |
+  |  Cortex-M4F @ 100MHz | FPU | 512KB Flash   |
+  |  NVIC | DMA2 | 12-bit ADC @ 2.4 MSPS       |
+  +=============================================+
 ```
 
 <br>
@@ -322,35 +333,35 @@ All standard 11-bit IDs @ 500 kbps
 ## `> cat /sys/bus/memory_map`
 
 ```
-    CYCLONE V SOC MEMORY MAP
-    ========================================
-
-    0x0000_0000  +--------------------+
-                 | SDRAM (DDR3)       |
-                 | 1 GB               |
-                 | Linux + userspace  |
-    0x3FFF_FFFF  +--------------------+
-
-    0xC000_0000  +--------------------+
-                 | FPGA Slaves        |
-                 | (HPS-to-FPGA       |
-                 |  bridge, 960 MB)   |
-    0xFBFF_FFFF  +--------------------+
-
-    0xFF20_0000  +--------------------+
-                 | Lightweight Bridge |
-                 | (custom registers) |
-                 |  0x00 STATUS       |
-                 |  0x04 CAN_ID       |
-                 |  0x10 TIMESTAMP    |
-                 |  0x20 ACCEL_FILT   |
-                 |  0x30 FIR_COEFF    |
-    0xFF3F_FFFF  +--------------------+
-
-    0xFFD0_0000  +--------------------+
-                 | HPS Peripherals    |
-                 | UART SPI I2C GPIO  |
-    0xFFFF_FFFF  +--------------------+
+  CYCLONE V SOC ADDRESS SPACE
+  +=========================================+
+  |                                         |
+  |  0x0000_0000 +------------------+       |
+  |              | SDRAM (DDR3)     |       |
+  |              | 1 GB             |       |
+  |              | Linux + apps     |       |
+  |  0x3FFF_FFFF +------------------+       |
+  |                                         |
+  |  0xC000_0000 +------------------+       |
+  |              | FPGA Slaves      |       |
+  |              | HPS-to-FPGA      |       |
+  |              | bridge (960 MB)  |       |
+  |  0xFBFF_FFFF +------------------+       |
+  |                                         |
+  |  0xFF20_0000 +------------------+       |
+  |              | LW Bridge        |       |
+  |              |  0x00 STATUS     |       |
+  |              |  0x04 CAN_ID     |       |
+  |              |  0x10 TIMESTAMP  |       |
+  |              |  0x20 ACCEL_FILT |       |
+  |              |  0x30 FIR_COEFF  |       |
+  |  0xFF3F_FFFF +------------------+       |
+  |                                         |
+  |  0xFFD0_0000 +------------------+       |
+  |              | HPS Peripherals  |       |
+  |              | UART SPI I2C GPIO|       |
+  |  0xFFFF_FFFF +------------------+       |
+  +=========================================+
 ```
 
 <br>
