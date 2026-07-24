@@ -3,14 +3,14 @@
 </p>
 
 <p align="center">
-  <a href="mailto:sanjeevsaravanakumarx1@gmail.com"><img src="https://img.shields.io/badge/Email-0f0c29?style=for-the-badge&logo=gmail&logoColor=e06c75" alt="Email"/></a>&nbsp;
+  <a href="mailto:sanjusaravananx1@gmail.com"><img src="https://img.shields.io/badge/Email-0f0c29?style=for-the-badge&logo=gmail&logoColor=e06c75" alt="Email"/></a>&nbsp;
   <a href="https://linkedin.com/in/sanjeev-kumarx2"><img src="https://img.shields.io/badge/LinkedIn-0f0c29?style=for-the-badge&logo=linkedin&logoColor=61afef" alt="LinkedIn"/></a>&nbsp;
   <a href="https://github.com/sanjusaravananx2-hub"><img src="https://img.shields.io/badge/GitHub-0f0c29?style=for-the-badge&logo=github&logoColor=ffffff" alt="GitHub"/></a>&nbsp;
   <img src="https://img.shields.io/badge/Leeds,%20UK-0f0c29?style=for-the-badge&logo=googlemaps&logoColor=98c379" alt="Location"/>
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=3000&pause=1000&color=C678DD&center=true&vCenter=true&repeat=true&width=750&height=30&lines=MSc+Embedded+Systems+Engineering+%40+University+of+Leeds;FPGA+%7C+Verilog+RTL+%7C+ARM+Cortex+%7C+Real-Time+Systems;900%2B+lines+of+synthesizable+Verilog+%E2%80%94+zero+IP+cores;Hardware-software+co-design+on+heterogeneous+SoCs" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=3000&pause=1000&color=C678DD&center=true&vCenter=true&repeat=true&width=750&height=30&lines=MSc+Embedded+Systems+Engineering+%40+University+of+Leeds;FPGA+%7C+Verilog+RTL+%7C+ARM+Cortex+%7C+Real-Time+Systems;Custom+Verilog+IP+on+FPGA+fabric+%7C+zero+soft+processors;Hardware-software+co-design+on+heterogeneous+SoCs" alt="Typing SVG" />
 </p>
 
 <br>
@@ -32,7 +32,7 @@ static const embedded_engineer_t me = {
     .name       = ENGINEER,
     .degree     = "MSc Embedded Systems Engineering",
     .university = "University of Leeds",
-    .graduation = "September 2026 (Predicted First Class)",
+    .graduation = "September 2026 (Predicted Distinction)",
     .focus      = {
         "FPGA & Digital Design (Verilog HDL)",
         "ARM Cortex-M/A Firmware (bare-metal & RTOS)",
@@ -96,65 +96,51 @@ static const embedded_engineer_t me = {
 
 ## `> ls ~/projects/`
 
-<!-- ==================== PROJECT 1 ==================== -->
+<!-- ==================== PROJECT 01 ==================== -->
 
 <table>
 <tr><td>
 
-### <img src="https://img.shields.io/badge/01-c678dd?style=for-the-badge" alt="01"/> &nbsp; FPGA Servo Motor Control System
+### <img src="https://img.shields.io/badge/01-c678dd?style=for-the-badge" alt="01"/> &nbsp; AR PCB Debugger
 
-<img src="https://img.shields.io/badge/Cyclone_V_DE1--SoC-c678dd?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Verilog_HDL-c678dd?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Quartus_Prime_22.1-c678dd?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/50_MHz-c678dd?style=flat-square" alt=""/>
+<img src="https://img.shields.io/badge/EGN_Build--a--thon_2026_Winner-c678dd?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/STM32F411-c678dd?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Bare--metal_C-c678dd?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/USB_CDC-c678dd?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Python_OpenCV-c678dd?style=flat-square" alt=""/>
 
 ```mermaid
-graph TD
-    subgraph FPGA["FPGA Fabric @ 50 MHz"]
-        FSM["Sweep FSM\nMulti-state controller"]
-        PWM["PWM Generator\n20-bit counter, 50 Hz"]
-        LCD["LCD Driver\nILI9341 240x320\n16-bit parallel"]
-        AXI["AXI4-Lite Slave\n4 registers, W1C IRQ\nGIC SPI no.72"]
+graph LR
+    subgraph BOARD["Target STM32 Board"]
+        direction TB
+        MCU["STM32F411\nbare-metal C\nGPIO / ADC / TIM registers"]
+        MARK["ArUco Marker\non-board fiducial"]
     end
 
-    subgraph HPS["HPS ARM Cortex-A9"]
-        APP["Runtime PWM control\nvia /dev/mem"]
+    subgraph HOST["Python Host"]
+        direction TB
+        CAM["Webcam + OpenCV\nArUco pose tracking"]
+        OVL["AR Overlay\nlive register values\npinned to the board"]
     end
 
-    FSM -- "duty/period" --> PWM
-    FSM -- "angle" --> LCD
-    PWM -- "PWM out" --> SERVO(["Servo Motor"])
-    APP -- "AXI4-Lite" --> AXI
-    AXI -- "config" --> FSM
-    AXI -. "IRQ" .-> APP
+    MCU == "USB CDC\n30 Hz stream" ==> OVL
+    MARK -- "pose" --> CAM
+    CAM --> OVL
 
-    classDef fpgaBlock fill:#c678dd,stroke:#c678dd,color:#1e1e2e
-    classDef hpsBlock fill:#61afef,stroke:#61afef,color:#1e1e2e
-    classDef extBlock fill:#e5c07b,stroke:#e5c07b,color:#1e1e2e
-    classDef fpgaBg fill:#2d2040,stroke:#c678dd,stroke-width:2px,color:#e0e0e0
-    classDef hpsBg fill:#1e2d40,stroke:#61afef,stroke-width:2px,color:#e0e0e0
+    classDef boardBlock fill:#c678dd,stroke:#c678dd,color:#1e1e2e
+    classDef hostBlock fill:#61afef,stroke:#61afef,color:#1e1e2e
+    classDef boardBg fill:#2d2040,stroke:#c678dd,stroke-width:2px,color:#e0e0e0
+    classDef hostBg fill:#1e2d40,stroke:#61afef,stroke-width:2px,color:#e0e0e0
 
-    class FSM,PWM,LCD,AXI fpgaBlock
-    class APP hpsBlock
-    class SERVO extBlock
-    class FPGA fpgaBg
-    class HPS hpsBg
+    class MCU,MARK boardBlock
+    class CAM,OVL hostBlock
+    class BOARD boardBg
+    class HOST hostBg
 ```
 
-**~900 lines of synthesizable Verilog. Zero IP cores. Zero soft processors.**
+**1st place, EGN Build-a-thon 2026 (Hackathon track). A custom debug tool built end to end.**
 
-- Full RTL flow: simulation ➜ synthesis ➜ P&R ➜ timing closure at **50 MHz**
-- On-chip debug with **SignalTap II** logic analyser
-- W1C interrupt latch connected to GIC SPI #72 for HPS notification
+- STM32 firmware streams live GPIO, ADC and timer-register state over USB CDC at 30 Hz
+- Python host (OpenCV, ArUco) overlays the register values onto the physical board through a webcam
+- The kind of bring-up and telemetry tooling that speeds up hardware debug
 
-<details>
-<summary>RTL Module Breakdown</summary>
-
-| Module | Lines | Function |
-|:-------|------:|:---------|
-| `pwm_generator.v` | 180 | 20-bit counter, configurable period & duty |
-| `sweep_fsm.v` | 200 | Multi-state FSM, sweep patterns |
-| `lcd_driver.v` | 280 | ILI9341 16-bit parallel, init FSM, gauge |
-| `axi4_lite_slave.v` | 240 | 4-register map, write-strobe, W1C IRQ |
-
-</details>
+<a href="https://github.com/sanjusaravananx2-hub/ar-pcb-debugger"><img src="https://img.shields.io/badge/View_Code-c678dd?style=flat-square&logo=github&logoColor=fff" alt="repo"/></a>
 
 </td></tr>
 </table>
@@ -206,9 +192,11 @@ graph LR
     class HPS hpsBg
 ```
 
-- Custom Verilog IP -- **90% latency reduction** vs software implementation
-- HW timestamping + FPGA pipeline -- **35% data throughput improvement**
-- Real 2-node CAN 2.0B network at 500 kbps with hardware filtering
+- Custom Verilog IP: SPI master, MCP2515 driver from datasheet, CAN frame parser, 8-tap pipelined FIR, with no IP cores or soft processors
+- AXI4-Lite slave written from scratch, exposing the FPGA IP to a Cortex-A9 Linux user-space C application over the HPS-to-FPGA bridge
+- Real 2-node CAN 2.0B network at 500 kbps, brought up and validated on DE1-SoC hardware
+
+<a href="https://github.com/sanjusaravananx2-hub/Can-sensor-fusion"><img src="https://img.shields.io/badge/View_Code-61afef?style=flat-square&logo=github&logoColor=fff" alt="repo"/></a>
 
 <details>
 <summary>FPGA Register Map (base 0xFF200000)</summary>
@@ -250,7 +238,7 @@ All standard 11-bit IDs @ 500 kbps
 <table>
 <tr><td>
 
-### <img src="https://img.shields.io/badge/03-98c379?style=for-the-badge" alt="03"/> &nbsp; AI Thermal Prediction — EV Inverter
+### <img src="https://img.shields.io/badge/03-98c379?style=for-the-badge" alt="03"/> &nbsp; AI Thermal Prediction: EV Inverter
 
 <img src="https://img.shields.io/badge/MSc_Dissertation-98c379?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/STM32-98c379?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/MATLAB%2FSimulink-98c379?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Edge_AI-98c379?style=flat-square" alt=""/>
 
@@ -267,7 +255,7 @@ graph LR
         direction TB
         TRAIN["Trained Regression\nModel"] --> QUANT
         QUANT["X-CUBE-AI\nCMSIS-NN\nQuantised"] --> STM
-        STM["STM32 Cortex-M\nInference < 1ms\n95%+ faster"]
+        STM["STM32 Cortex-M\nINT8 CMSIS-NN\n10 kHz control loop"]
     end
 
     TJ -. "training\ndata" .-> TRAIN
@@ -283,9 +271,11 @@ graph LR
     class DEPLOY deployBg
 ```
 
-- 4-layer Foster RC thermal network — validated **±3–5°C** vs datasheet
-- Edge deployment via X-CUBE-AI/CMSIS-NN — **95%+ inference latency reduction**
+- 4-layer Foster RC thermal network, validated within **±3–5°C** of datasheet references
+- Edge deployment via X-CUBE-AI / CMSIS-NN, running INT8 inference inside a 10 kHz real-time loop
 - Bridging physics-based modelling with on-chip machine learning
+
+<a href="https://github.com/sanjusaravananx2-hub/AI-driven-Thermal-analysis-of-an-Ev-inverter-using-STM32"><img src="https://img.shields.io/badge/View_Code-98c379?style=flat-square&logo=github&logoColor=fff" alt="repo"/></a>
 
 </td></tr>
 </table>
@@ -335,6 +325,8 @@ graph LR
 - DMA double-buffering for **zero-copy** continuous acquisition
 - USB CDC high-throughput streaming to Python host
 
+<a href="https://github.com/sanjusaravananx2-hub/stm32-usb-signal-analyser"><img src="https://img.shields.io/badge/View_Code-e06c75?style=flat-square&logo=github&logoColor=fff" alt="repo"/></a>
+
 </td></tr>
 </table>
 
@@ -359,7 +351,7 @@ graph TD
     I2C_PINS --> SENS["MPU6050 + BMP280\nIMU + Environmental"]
     UART_PINS --> DBG["Debug Console"]
     USB_PINS --> PC["Host PC\nUSB CDC"]
-    PB8 --> PWMO["PWM Output\nServo Control"]
+    PB8 --> PWMO["PWM Output\nTIM4 PWM"]
     PC13 --> INT["MCP2515 /INT\nCAN RX Ready"]
 
     classDef pinBlock fill:#c678dd,stroke:#c678dd,color:#1e1e2e
@@ -410,9 +402,9 @@ graph TD
 
 | Role | Organisation | Period |
 |:-----|:------------|:-------|
-| **Avionics & Propulsion Engineer** | Gryphon Arrows — IMechE UAS Challenge | Oct 2025 — Present |
-| **Vehicle Dynamics Engineer** | Leeds Gryphon Racing — Formula Student EV | Oct 2025 — Present |
-| **Embedded Systems Engineer** (Industrial Placement) | InTrainz, India | Feb 2024 — Sep 2024 |
+| **Avionics & Firmware Engineer** | Gryphon Arrows (IMechE UAS Challenge) | Oct 2025 – Present |
+| **Vehicle Dynamics Engineer** | Leeds Gryphon Racing (Formula Student EV) | Oct 2025 – Present |
+| **Embedded Systems Engineer** (Industrial Placement) | InTrainz, India | Feb 2024 – Sep 2024 |
 
 <br>
 
@@ -420,8 +412,8 @@ graph TD
 
 | Degree | Institution | Period |
 |:-------|:-----------|:-------|
-| **MSc Embedded Systems Engineering** (Predicted 1st) | University of Leeds | 2025 — 2026 |
-| **B.Eng Electronics & Communication** (1st with Distinction) | Sathyabama Institute, Chennai | 2021 — 2025 |
+| **MSc Embedded Systems Engineering** (Predicted Distinction) | University of Leeds | 2025 – 2026 |
+| **B.Eng Electronics & Communication** (First Class with Distinction) | Sathyabama Institute, Chennai | 2021 – 2025 |
 
 <br>
 
