@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=230&section=header&text=Sanjeev%20Kumar&fontSize=44&fontColor=ffffff&fontAlignY=32&desc=Embedded%20Systems%20Engineer%20%E2%80%A2%20FPGA%20%E2%80%A2%20RTL%20Design%20%E2%80%A2%20ARM%20Cortex%20%E2%80%A2%20Firmware&descSize=15&descColor=c9d1d9&descAlignY=52&animation=fadeIn" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=220&section=header&text=Sanjeev%20Kumar&fontSize=46&fontColor=ffffff&fontAlignY=32&desc=FPGA%20%E2%80%A2%20RTL%20Design%20%E2%80%A2%20Bare-Metal%20Firmware%20%E2%80%A2%20Hardware%2FSoftware%20Co-Design&descSize=15&descColor=c9d1d9&descAlignY=52&animation=fadeIn" width="100%"/>
 </p>
 
 <p align="center">
@@ -10,7 +10,15 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=3000&pause=1000&color=C678DD&center=true&vCenter=true&repeat=true&width=750&height=30&lines=MSc+Embedded+Systems+Engineering+%40+University+of+Leeds;FPGA+%7C+Verilog+RTL+%7C+ARM+Cortex+%7C+Real-Time+Systems;Custom+Verilog+IP+on+FPGA+fabric+%7C+zero+soft+processors;Hardware-software+co-design+on+heterogeneous+SoCs" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=19&duration=3200&pause=900&color=C678DD&center=true&vCenter=true&repeat=true&width=780&height=30&lines=MSc+Embedded+Systems+Engineering+%40+University+of+Leeds;Verilog+RTL+taken+through+timing+closure+onto+real+silicon;Custom+FPGA+datapaths+%7C+no+vendor+IP%2C+no+soft+processor;I+quote+cycle+counts+because+I+measured+them" alt="Typing SVG"/>
+</p>
+
+<br>
+
+## `> dmesg | grep flagship`
+
+<p align="center">
+  <img src="assets/datapath.svg" alt="CAN Sensor Fusion Platform datapath: STM32F4 over 500 kbps CAN into custom Verilog IP on the Cyclone V fabric, through a self-written AXI4-Lite slave to a Cortex-A9 running Linux" width="100%"/>
 </p>
 
 <br>
@@ -18,445 +26,168 @@
 ## `> whoami`
 
 ```c
-#define ENGINEER "Sanjeev Kumar"
-
 typedef struct {
     const char *name;
     const char *degree;
     const char *university;
-    const char *graduation;
+    const char *graduating;
     const char *focus[5];
-} embedded_engineer_t;
+} engineer_t;
 
-static const embedded_engineer_t me = {
-    .name       = ENGINEER,
+static const engineer_t me = {
+    .name       = "Sanjeev Kumar",
     .degree     = "MSc Embedded Systems Engineering",
     .university = "University of Leeds",
-    .graduation = "September 2026 (Predicted Distinction)",
+    .graduating = "September 2026 (Predicted Distinction)",
     .focus      = {
-        "FPGA & Digital Design (Verilog HDL)",
-        "ARM Cortex-M/A Firmware (bare-metal & RTOS)",
-        "Hardware-Software Co-Design on SoC",
-        "Real-Time Signal Processing & Edge AI",
+        "FPGA & digital design in Verilog / VHDL",
+        "Testbench-driven verification, then silicon",
+        "Bare-metal firmware on ARM Cortex-M",
+        "Hardware-software co-design on heterogeneous SoC",
         NULL
     }
 };
 ```
+
+I work on the boundary between software and hardware, and I like the part where you
+find out whether the thing you built actually behaves the way you claimed. Most of what
+is here was built solo, from architecture through to a board on the desk.
 
 <br>
 
 ## `> cat /proc/skills`
 
 <table>
-<tr><td>
+<tr><td width="50%" valign="top">
 
-**HDL & Digital Design**
+**HDL &amp; Digital Design**
 
 ![Verilog](https://img.shields.io/badge/Verilog_HDL-c678dd?style=for-the-badge&logoColor=fff)
-![SystemVerilog](https://img.shields.io/badge/SystemVerilog-61afef?style=for-the-badge&logoColor=fff)
+![VHDL](https://img.shields.io/badge/VHDL-c678dd?style=for-the-badge&logoColor=fff)
 ![RTL](https://img.shields.io/badge/RTL_Design-282c34?style=for-the-badge)
-![FSM](https://img.shields.io/badge/FSM_Design-282c34?style=for-the-badge)
+![FSM](https://img.shields.io/badge/FSM_&_Datapath-282c34?style=for-the-badge)
 
-**FPGA & EDA Tools**
+**FPGA Flow &amp; EDA**
 
 ![Quartus](https://img.shields.io/badge/Intel_Quartus_Prime-61afef?style=for-the-badge&logo=intel&logoColor=white)
 ![ModelSim](https://img.shields.io/badge/ModelSim-282c34?style=for-the-badge)
-![SignalTap](https://img.shields.io/badge/SignalTap_II-282c34?style=for-the-badge)
+![STA](https://img.shields.io/badge/Static_Timing_Analysis-282c34?style=for-the-badge)
 
-</td><td>
+</td><td width="50%" valign="top">
 
 **Languages**
 
 ![C](https://img.shields.io/badge/C-e06c75?style=for-the-badge&logo=c&logoColor=fff)
-![C++](https://img.shields.io/badge/C++-61afef?style=for-the-badge&logo=cplusplus&logoColor=fff)
+![C++](https://img.shields.io/badge/C++-e06c75?style=for-the-badge&logo=cplusplus&logoColor=fff)
 ![Python](https://img.shields.io/badge/Python-98c379?style=for-the-badge&logo=python&logoColor=fff)
-![MATLAB](https://img.shields.io/badge/MATLAB-e5c07b?style=for-the-badge&logo=mathworks&logoColor=fff)
+![MATLAB](https://img.shields.io/badge/MATLAB-e5c07b?style=for-the-badge)
 
-**Embedded Platforms**
+**Embedded &amp; Interfaces**
 
-![STM32](https://img.shields.io/badge/STM32_Cortex--M-e06c75?style=for-the-badge&logo=stmicroelectronics&logoColor=fff)
-![CycloneV](https://img.shields.io/badge/Cyclone_V_SoC-61afef?style=for-the-badge&logo=intel&logoColor=white)
-![Pixhawk](https://img.shields.io/badge/PX4_NuttX-282c34?style=for-the-badge)
+![ARM](https://img.shields.io/badge/ARM_Cortex--M_/_A9-61afef?style=for-the-badge&logo=arm&logoColor=fff)
+![CAN](https://img.shields.io/badge/CAN_2.0B-282c34?style=for-the-badge)
+![AXI](https://img.shields.io/badge/AXI4--Lite-282c34?style=for-the-badge)
+![SPI](https://img.shields.io/badge/SPI_/_I2C_/_UART_/_USB_CDC-282c34?style=for-the-badge)
 
 </td></tr>
 </table>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/AXI4--Lite-c678dd?style=for-the-badge" alt="AXI4-Lite"/>
-  <img src="https://img.shields.io/badge/SPI-61afef?style=for-the-badge" alt="SPI"/>
-  <img src="https://img.shields.io/badge/I2C-98c379?style=for-the-badge" alt="I2C"/>
-  <img src="https://img.shields.io/badge/CAN_2.0B-e06c75?style=for-the-badge" alt="CAN"/>
-  <img src="https://img.shields.io/badge/UART-e5c07b?style=for-the-badge" alt="UART"/>
-  <img src="https://img.shields.io/badge/PWM-61afef?style=for-the-badge" alt="PWM"/>
-  <img src="https://img.shields.io/badge/DMA-c678dd?style=for-the-badge" alt="DMA"/>
-  <img src="https://img.shields.io/badge/USB_CDC-98c379?style=for-the-badge" alt="USB"/>
-</p>
-
 <br>
 
-## `> ls ~/projects/`
-
-<!-- ==================== PROJECT 01 ==================== -->
+## `> ls -la ~/projects`
 
 <table>
-<tr><td>
+<tr><td width="55%" valign="top">
 
-### <img src="https://img.shields.io/badge/01-c678dd?style=for-the-badge" alt="01"/> &nbsp; AR PCB Debugger
+### 01 &nbsp;CAN Sensor Fusion Platform
+`Verilog RTL` `AXI4-Lite` `Cyclone V SoC` `Cortex-A9 Linux`
 
-<img src="https://img.shields.io/badge/EGN_Build--a--thon_2026_Winner-c678dd?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/STM32F411-c678dd?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Bare--metal_C-c678dd?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/USB_CDC-c678dd?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Python_OpenCV-c678dd?style=flat-square" alt=""/>
+A four-stage heterogeneous platform, built end to end. Custom
+Verilog IP on the FPGA fabric with **no vendor cores and no soft
+processor**: SPI master, a register-level MCP2515 driver written
+from the datasheet, a CAN frame parser, a 1&nbsp;&micro;s hardware
+timestamp unit and an 8-tap pipelined FIR.
 
-```mermaid
-graph LR
-    subgraph BOARD["Target STM32 Board"]
-        direction TB
-        MCU["STM32F411\nbare-metal C\nGPIO / ADC / TIM registers"]
-        MARK["ArUco Marker\non-board fiducial"]
-    end
+Every block got its own self-checking testbench before integration.
+Then I found the bug that only ever reproduced on silicon: the data
+register was written a cycle ahead of the valid flag, so the CPU
+could latch a half-updated word.
 
-    subgraph HOST["Python Host"]
-        direction TB
-        CAM["Webcam + OpenCV\nArUco pose tracking"]
-        OVL["AR Overlay\nlive register values\npinned to the board"]
-    end
+<a href="https://github.com/sanjusaravananx2-hub/Can-sensor-fusion"><img src="https://img.shields.io/badge/View_Code-c678dd?style=flat-square&logo=github&logoColor=fff"/></a>
 
-    MCU == "USB CDC\n30 Hz stream" ==> OVL
-    MARK -- "pose" --> CAM
-    CAM --> OVL
+</td><td width="45%" valign="top">
 
-    classDef boardBlock fill:#c678dd,stroke:#c678dd,color:#1e1e2e
-    classDef hostBlock fill:#61afef,stroke:#61afef,color:#1e1e2e
-    classDef boardBg fill:#2d2040,stroke:#c678dd,stroke-width:2px,color:#e0e0e0
-    classDef hostBg fill:#1e2d40,stroke:#61afef,stroke-width:2px,color:#e0e0e0
+### 02 &nbsp;Predictive Thermal Protection
+`STM32F411` `C` `MATLAB/Simulink` `MSc Thesis`
 
-    class MCU,MARK boardBlock
-    class CAM,OVL hostBlock
-    class BOARD boardBg
-    class HOST hostBg
-```
+Replaces a reactive thermistor with a model that predicts IGBT
+junction temperature on the MCU.
 
-**1st place, EGN Build-a-thon 2026 (Hackathon track). A custom debug tool built end to end.**
+| | |
+|---|---|
+| Hazardous conditions caught | **47 / 47**, never late |
+| Thermistor baseline | 21 / 47 |
+| Inference | **284.7 &micro;s** @ 96 MHz |
+| Processor load | **2.85 %** |
+| Footprint | 7,868 B flash, 0 B RAM |
 
-- STM32 firmware streams live GPIO, ADC and timer-register state over USB CDC at 30 Hz
-- Python host (OpenCV, ArUco) overlays the register values onto the physical board through a webcam
-- The kind of bring-up and telemetry tooling that speeds up hardware debug
+Evaluated int8 via CMSIS-NN and **rejected it**: 17 % faster, but
+worst-case error went from 1.35 to 11.51 &deg;C. The benchmark
+decided, not preference.
 
-<a href="https://github.com/sanjusaravananx2-hub/ar-pcb-debugger"><img src="https://img.shields.io/badge/View_Code-c678dd?style=flat-square&logo=github&logoColor=fff" alt="repo"/></a>
+<a href="https://github.com/sanjusaravananx2-hub/AI-driven-Thermal-analysis-of-an-Ev-inverter-using-STM32"><img src="https://img.shields.io/badge/View_Code-61afef?style=flat-square&logo=github&logoColor=fff"/></a>
 
 </td></tr>
-</table>
+<tr><td valign="top">
 
-<!-- ==================== PROJECT 2 ==================== -->
+### 03 &nbsp;AR PCB Debugger &nbsp;🥇
+`STM32F411` `USB CDC` `OpenCV` `ArUco`
 
-<table>
-<tr><td>
+Firmware streams live GPIO, ADC and timer state over USB at 30 Hz
+while a Python host tracks the physical board by computer vision and
+overlays pin state and waveforms onto it in real time.
 
-### <img src="https://img.shields.io/badge/02-61afef?style=for-the-badge" alt="02"/> &nbsp; CAN Bus Sensor Fusion Platform
+Built solo in two days because the existing debug workflow was
+tedious. **1st place, EGN Build-a-thon 2026.**
 
-<img src="https://img.shields.io/badge/STM32F4-61afef?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Cyclone_V_SoC-61afef?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Verilog-61afef?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/CAN_2.0B-61afef?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/AXI4--Lite-61afef?style=flat-square" alt=""/>
+<a href="https://github.com/sanjusaravananx2-hub/ar-pcb-debugger"><img src="https://img.shields.io/badge/View_Code-98c379?style=flat-square&logo=github&logoColor=fff"/></a>
 
-```mermaid
-graph LR
-    subgraph SENSOR["STM32F4 Sensor Node"]
-        direction TB
-        IMU["MPU6050\n6-axis IMU"] --> MCU
-        BMP["BMP280\nTemp + Pressure"] --> MCU
-        MCU["STM32 Cortex-M4\nISR-driven, bare-metal\nI2C 400kHz, 100Hz"] --> CAN_TX["MCP2515\n+ TJA1050"]
-    end
+</td><td valign="top">
 
-    subgraph FPGA_FAB["Cyclone V FPGA Fabric"]
-        direction TB
-        SPI["SPI Master"] --> PARSE["CAN Frame\nParser"]
-        PARSE --> FIR["8-Tap FIR Filter\nPipelined"]
-        FIR --> TS["HW Timestamp\n1us resolution"]
-    end
+### 04 &nbsp;STM32 USB Signal Analyser
+`STM32F411` `DMA` `FFT` `USB CDC`
 
-    subgraph HPS["HPS Cortex-A9 Linux"]
-        MON["can_monitor\nmmap 0xFF200000\nCSV + 7-seg stats"]
-    end
+A real-time USB oscilloscope and FFT analyser on a Black Pill.
+Bare-metal C with DMA double-buffering feeding a streaming USB CDC
+link, plotted by a Python host.
 
-    CAN_TX == "CAN 2.0B\n500 kbps" ==> SPI
-    TS -- "AXI4-Lite" --> MON
-
-    classDef sensorBlock fill:#e06c75,stroke:#e06c75,color:#1e1e2e
-    classDef fpgaBlock fill:#c678dd,stroke:#c678dd,color:#1e1e2e
-    classDef hpsBlock fill:#61afef,stroke:#61afef,color:#1e1e2e
-    classDef sensorBg fill:#3a2028,stroke:#e06c75,stroke-width:2px,color:#e0e0e0
-    classDef fpgaBg fill:#2d2040,stroke:#c678dd,stroke-width:2px,color:#e0e0e0
-    classDef hpsBg fill:#1e2d40,stroke:#61afef,stroke-width:2px,color:#e0e0e0
-
-    class IMU,BMP,MCU,CAN_TX sensorBlock
-    class SPI,PARSE,FIR,TS fpgaBlock
-    class MON hpsBlock
-    class SENSOR sensorBg
-    class FPGA_FAB fpgaBg
-    class HPS hpsBg
-```
-
-- Custom Verilog IP: SPI master, MCP2515 driver from datasheet, CAN frame parser, 8-tap pipelined FIR, with no IP cores or soft processors
-- AXI4-Lite slave written from scratch, exposing the FPGA IP to a Cortex-A9 Linux user-space C application over the HPS-to-FPGA bridge
-- Real 2-node CAN 2.0B network at 500 kbps, brought up and validated on DE1-SoC hardware
-
-<a href="https://github.com/sanjusaravananx2-hub/Can-sensor-fusion"><img src="https://img.shields.io/badge/View_Code-61afef?style=flat-square&logo=github&logoColor=fff" alt="repo"/></a>
-
-<details>
-<summary>FPGA Register Map (base 0xFF200000)</summary>
-
-| Offset | Register | R/W | Description |
-|:-------|:---------|:---:|:------------|
-| `0x00` | STATUS | R | `[0]` frame_valid `[1]` error `[15:8]` err_count |
-| `0x04` | CAN_ID | R | `[10:0]` Latest CAN ID |
-| `0x08` | DATA_LO | R | CAN bytes `[3:0]` |
-| `0x0C` | DATA_HI | R | CAN bytes `[7:4]` |
-| `0x10` | TIMESTAMP | R | 32-bit HW timestamp (1 us) |
-| `0x14` | ACCEL_RAW | R | Raw accel X/Y/Z (int16) |
-| `0x20` | ACCEL_FILT | R | FIR-filtered (int32) |
-| `0x30` | FIR_COEFF | W | Coefficient write (8 taps) |
-| `0x40` | FRAME_CNT | R | Total frames received |
-| `0x44` | ERROR_CNT | R | Total errors detected |
-
-</details>
-
-<details>
-<summary>CAN Message Protocol</summary>
-
-| CAN ID | Payload | DLC | Rate |
-|:-------|:--------|:---:|:-----|
-| `0x100` | Accel X/Y/Z (3 x int16) | 6 | 100 Hz |
-| `0x101` | Gyro X/Y/Z (3 x int16) | 6 | 100 Hz |
-| `0x102` | Temp + Pressure | 6 | 10 Hz |
-| `0x1FF` | Frame count + Uptime | 6 | 1 Hz |
-
-All standard 11-bit IDs @ 500 kbps
-
-</details>
-
-</td></tr>
-</table>
-
-<!-- ==================== PROJECT 3 ==================== -->
-
-<table>
-<tr><td>
-
-### <img src="https://img.shields.io/badge/03-98c379?style=for-the-badge" alt="03"/> &nbsp; AI Thermal Prediction: EV Inverter
-
-<img src="https://img.shields.io/badge/MSc_Dissertation-98c379?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/STM32-98c379?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/MATLAB%2FSimulink-98c379?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Edge_AI-98c379?style=flat-square" alt=""/>
-
-```mermaid
-graph LR
-    subgraph MODEL["MATLAB/Simulink Modelling"]
-        direction TB
-        INV["SPWM Inverter\n600V DC, 10 kHz\n35A peak"] --> RC
-        RC["Foster RC Network\n4-layer thermal model"] --> TJ
-        TJ["Tj: Junction Temp\n+/- 3-5C accuracy"]
-    end
-
-    subgraph DEPLOY["Edge Deployment"]
-        direction TB
-        TRAIN["Trained Regression\nModel"] --> QUANT
-        QUANT["X-CUBE-AI\nCMSIS-NN\nQuantised"] --> STM
-        STM["STM32 Cortex-M\nINT8 CMSIS-NN\n10 kHz control loop"]
-    end
-
-    TJ -. "training\ndata" .-> TRAIN
-
-    classDef modelBlock fill:#98c379,stroke:#98c379,color:#1e1e2e
-    classDef deployBlock fill:#e5c07b,stroke:#e5c07b,color:#1e1e2e
-    classDef modelBg fill:#1e3028,stroke:#98c379,stroke-width:2px,color:#e0e0e0
-    classDef deployBg fill:#3a3020,stroke:#e5c07b,stroke-width:2px,color:#e0e0e0
-
-    class INV,RC,TJ modelBlock
-    class TRAIN,QUANT,STM deployBlock
-    class MODEL modelBg
-    class DEPLOY deployBg
-```
-
-- 4-layer Foster RC thermal network, validated within **±3–5°C** of datasheet references
-- Edge deployment via X-CUBE-AI / CMSIS-NN, running INT8 inference inside a 10 kHz real-time loop
-- Bridging physics-based modelling with on-chip machine learning
-
-<a href="https://github.com/sanjusaravananx2-hub/AI-driven-Thermal-analysis-of-an-Ev-inverter-using-STM32"><img src="https://img.shields.io/badge/View_Code-98c379?style=flat-square&logo=github&logoColor=fff" alt="repo"/></a>
-
-</td></tr>
-</table>
-
-<!-- ==================== PROJECT 4 ==================== -->
-
-<table>
-<tr><td>
-
-### <img src="https://img.shields.io/badge/04-e06c75?style=for-the-badge" alt="04"/> &nbsp; STM32 USB Signal Analyser
-
-<img src="https://img.shields.io/badge/STM32F411-e06c75?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Bare--metal_C-e06c75?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/USB_CDC-e06c75?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/DMA-e06c75?style=flat-square" alt=""/> <img src="https://img.shields.io/badge/Python_Host-e06c75?style=flat-square" alt=""/>
-
-```mermaid
-graph LR
-    SIG(["Analog/Digital\nSignal Input"])
-
-    subgraph MCU["STM32F411 Black Pill"]
-        direction TB
-        ADC["ADC + Timer\n12-bit, 2.4 MSPS"] --> DMA
-        DMA["DMA Engine\nDouble-buffered"] --> BUF
-        BUF["Ring Buffer\nZero-copy"] --> USB
-        USB["USB CDC TX"]
-    end
-
-    subgraph HOST["Host PC"]
-        PY["Python App\nReal-time FFT\nOscilloscope"]
-    end
-
-    SIG -- "ADC_IN" --> ADC
-    USB == "USB CDC" ==> PY
-
-    classDef mcuBlock fill:#e06c75,stroke:#e06c75,color:#1e1e2e
-    classDef hostBlock fill:#98c379,stroke:#98c379,color:#1e1e2e
-    classDef extBlock fill:#e5c07b,stroke:#e5c07b,color:#1e1e2e
-    classDef mcuBg fill:#3a2028,stroke:#e06c75,stroke-width:2px,color:#e0e0e0
-    classDef hostBg fill:#1e3028,stroke:#98c379,stroke-width:2px,color:#e0e0e0
-
-    class ADC,DMA,BUF,USB mcuBlock
-    class PY hostBlock
-    class SIG extBlock
-    class MCU mcuBg
-    class HOST hostBg
-```
-
-- Real-time oscilloscope + FFT analyser on bare-metal STM32
-- DMA double-buffering for **zero-copy** continuous acquisition
-- USB CDC high-throughput streaming to Python host
-
-<a href="https://github.com/sanjusaravananx2-hub/stm32-usb-signal-analyser"><img src="https://img.shields.io/badge/View_Code-e06c75?style=flat-square&logo=github&logoColor=fff" alt="repo"/></a>
+<a href="https://github.com/sanjusaravananx2-hub/stm32-usb-signal-analyser"><img src="https://img.shields.io/badge/View_Code-e5c07b?style=flat-square&logo=github&logoColor=fff"/></a>
 
 </td></tr>
 </table>
 
 <br>
 
-## `> cat /proc/mcu/pinout`
+## `> git log --stat`
 
-```mermaid
-graph TD
-    subgraph MCU["STM32F4 Cortex-M4F @ 100 MHz"]
-        PA0["PA0: ADC_IN0"]
-        SPI_PINS["PA5/PA6/PA7/PB4:\nSPI1 Bus"]
-        I2C_PINS["PB6/PB7:\nI2C1 Bus"]
-        UART_PINS["PA9/PA10:\nUSART1"]
-        USB_PINS["PA11/PA12:\nUSB FS"]
-        PB8["PB8: TIM4_CH3"]
-        PC13["PC13: EXTI"]
-    end
-
-    PA0 --> CAP["Signal Capture\nADC 12-bit 2.4MSPS"]
-    SPI_PINS --> MCP["MCP2515\nCAN Controller"]
-    I2C_PINS --> SENS["MPU6050 + BMP280\nIMU + Environmental"]
-    UART_PINS --> DBG["Debug Console"]
-    USB_PINS --> PC["Host PC\nUSB CDC"]
-    PB8 --> PWMO["PWM Output\nTIM4 PWM"]
-    PC13 --> INT["MCP2515 /INT\nCAN RX Ready"]
-
-    classDef pinBlock fill:#c678dd,stroke:#c678dd,color:#1e1e2e
-    classDef periphBlock fill:#61afef,stroke:#61afef,color:#1e1e2e
-    classDef warnBlock fill:#e06c75,stroke:#e06c75,color:#1e1e2e
-    classDef mcuBg fill:#2d2040,stroke:#c678dd,stroke-width:2px,color:#e0e0e0
-
-    class PA0,SPI_PINS,I2C_PINS,UART_PINS,USB_PINS,PB8,PC13 pinBlock
-    class CAP,SENS,DBG,PC,PWMO periphBlock
-    class MCP,INT warnBlock
-    class MCU mcuBg
-```
-
-<br>
-
-## `> cat /sys/bus/memory_map`
-
-```mermaid
-graph TD
-    subgraph SOC["Cyclone V SoC Address Space"]
-        direction TB
-        SDRAM["0x0000_0000 - 0x3FFF_FFFF\nSDRAM DDR3 - 1 GB\nLinux kernel + userspace"]
-        FPGA_S["0xC000_0000 - 0xFBFF_FFFF\nFPGA Slaves\nHPS-to-FPGA bridge - 960 MB"]
-        LW["0xFF20_0000 - 0xFF3F_FFFF\nLightweight Bridge\nSTATUS | CAN_ID | TIMESTAMP\nACCEL_FILT | FIR_COEFF"]
-        PERIPH["0xFFD0_0000 - 0xFFFF_FFFF\nHPS Peripherals\nUART | SPI | I2C | GPIO"]
-    end
-
-    SDRAM ~~~ FPGA_S
-    FPGA_S ~~~ LW
-    LW ~~~ PERIPH
-
-    classDef ramBlock fill:#61afef,stroke:#61afef,color:#1e1e2e
-    classDef fpgaBlock fill:#c678dd,stroke:#c678dd,color:#1e1e2e
-    classDef lwBlock fill:#98c379,stroke:#98c379,color:#1e1e2e
-    classDef perBlock fill:#e5c07b,stroke:#e5c07b,color:#1e1e2e
-    classDef socBg fill:#1e1e2e,stroke:#c678dd,stroke-width:2px,color:#e0e0e0
-
-    class SDRAM ramBlock
-    class FPGA_S fpgaBlock
-    class LW lwBlock
-    class PERIPH perBlock
-    class SOC socBg
-```
-
-<br>
-
-## `> cat /etc/experience`
-
-| Role | Organisation | Period |
-|:-----|:------------|:-------|
-| **Avionics & Firmware Engineer** | Gryphon Arrows (IMechE UAS Challenge) | Oct 2025 – Present |
-| **Vehicle Dynamics Engineer** | Leeds Gryphon Racing (Formula Student EV) | Oct 2025 – Present |
-| **Embedded Systems Engineer** (Industrial Placement) | InTrainz, India | Feb 2024 – Sep 2024 |
-
-<br>
-
-## `> cat /etc/education`
-
-| Degree | Institution | Period |
-|:-------|:-----------|:-------|
-| **MSc Embedded Systems Engineering** (Predicted Distinction) | University of Leeds | 2025 – 2026 |
-| **B.Eng Electronics & Communication** (First Class with Distinction) | Sathyabama Institute, Chennai | 2021 – 2025 |
-
-<br>
-
-## `> cat /etc/certs`
-
-<p>
-  <img src="https://img.shields.io/badge/UK_Amateur_Radio_M7KVD-c678dd?style=for-the-badge&logo=radio&logoColor=fff" alt="Radio"/>
-  <img src="https://img.shields.io/badge/GE_Aerospace_EE_Sim-61afef?style=for-the-badge&logo=ge&logoColor=white" alt="GE"/>
-  <img src="https://img.shields.io/badge/Power_Electronics-98c379?style=for-the-badge&logo=coursera&logoColor=fff" alt="Power"/>
-  <img src="https://img.shields.io/badge/MATLAB_Onramp-e5c07b?style=for-the-badge&logo=mathworks&logoColor=fff" alt="MATLAB"/>
+<p align="center">
+  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=sanjusaravananx2-hub&show_icons=true&hide_border=true&bg_color=0d1117&title_color=c678dd&icon_color=98c379&text_color=c9d1d9&include_all_commits=true" alt="GitHub stats"/>
+  <img width="41%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=sanjusaravananx2-hub&layout=compact&hide_border=true&bg_color=0d1117&title_color=c678dd&text_color=c9d1d9&langs_count=8" alt="Top languages"/>
 </p>
 
 <br>
 
-## `> top -b | head`
+## `> tail ~/.education`
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=sanjusaravananx2-hub&show_icons=true&theme=one_dark_pro&bg_color=1e1e2e&title_color=c678dd&icon_color=61afef&text_color=abb2bf&border_color=3e4452" height="180"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=sanjusaravananx2-hub&theme=one-dark-pro&background=1e1e2e&ring=c678dd&fire=e06c75&currStreakLabel=c678dd&sideLabels=abb2bf&dates=636d83&border=3e4452" height="180"/>
-</p>
+**MSc Embedded Systems Engineering** &nbsp;&middot;&nbsp; University of Leeds &nbsp;&middot;&nbsp; 2025 to 2026 &nbsp;&middot;&nbsp; *Predicted Distinction*
+<br><sub>Hardware/Software Co-Design &middot; Real-Time Systems &middot; Digital Signal Processing &middot; Advanced Control &middot; Course Representative</sub>
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sanjusaravananx2-hub&layout=compact&theme=one_dark_pro&bg_color=1e1e2e&title_color=c678dd&text_color=abb2bf&border_color=3e4452&langs_count=8" height="160"/>
-</p>
+**BEng Electronics &amp; Communication Engineering** &nbsp;&middot;&nbsp; Sathyabama Institute of Science &amp; Technology &nbsp;&middot;&nbsp; *First Class with Distinction*
+
+**Published** &nbsp;&middot;&nbsp; *Multi-Object Trajectory Prediction for Moving Object Localisation* &nbsp;&middot;&nbsp; *Enhanced Fish Freshness Detection Using Image Processing Techniques*
 
 <br>
 
-## `> tail -f /var/log/activity.log`
-
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=sanjusaravananx2-hub&theme=one-dark&bg_color=1e1e2e&color=c678dd&line=61afef&point=e06c75&area=true&area_color=c678dd&hide_border=false" width="95%"/>
-</p>
-
----
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=120&section=footer" width="100%"/>
-</p>
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=sanjusaravananx2-hub&style=for-the-badge&color=c678dd&label=PROFILE+VIEWS" alt="views"/>
-</p>
-
-<p align="center">
-  <i>"The best interface between hardware and software is a well-defined register map."</i>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:24243e,50:302b63,100:0f0c29&height=120&section=footer" width="100%"/>
 </p>
